@@ -5,7 +5,7 @@
 #include "sl_cli_instances.h"
 #include "app_framework_common.h"
 #include "sl-connect-power-manager.h"
-#include "sl_iostream_init_usart_instances.h"
+#include "sl_iostream_init_eusart_instances.h"
 
 /***************************************************************************//**
  * Check if the MCU can sleep at that time. This function is called when the system
@@ -100,7 +100,7 @@ bool sl_power_manager_sleep_on_isr_exit(void)
     sleep = true;
   }
 
-  answer = sl_iostream_usart_vcom_sleep_on_isr_exit();
+  answer = sl_iostream_eusart_vcom_sleep_on_isr_exit();
   if (answer == SL_POWER_MANAGER_WAKEUP) {
     force_wakeup = true;
   } else if (answer == SL_POWER_MANAGER_SLEEP) {

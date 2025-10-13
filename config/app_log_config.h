@@ -147,7 +147,7 @@
 
 // <e APP_LOG_OVERRIDE_DEFAULT_STREAM> Override default stream
 // <i> Enable overriding the system level default stream to use for logging.
-#define APP_LOG_OVERRIDE_DEFAULT_STREAM            1
+#define APP_LOG_OVERRIDE_DEFAULT_STREAM            0
 
 // <o APP_LOG_STREAM_TYPE> Stream type
 // <SL_IOSTREAM_TYPE_SWO=> SWO

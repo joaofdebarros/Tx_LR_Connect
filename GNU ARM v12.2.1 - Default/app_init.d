@@ -6,29 +6,22 @@ app_init.o: ../app_init.c \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_handles.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_init_usart_instances.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_component_catalog.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_power_manager_config.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_gcc.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sli_code_classification.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h \
+ C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_init_eusart_instances.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream_uart.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\fgm23\include\em_device.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\fgm23\include\fgm230sa27hgn.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\core_cm33.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_version.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_gcc.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\interrupt_manager\inc\arm\cmsis_nvic_virtual.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\interrupt_manager\inc\sl_interrupt_manager.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sli_code_classification.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\mpu_armv8.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\fgm23\include\system_fgm23.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\fgm23\include\fgm23_scratchpad.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\fgm23\include\fgm23_emu.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\fgm23\include\fgm23_cmu.h \
@@ -82,6 +75,11 @@ app_init.o: ../app_init.c \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\s2_signals\dmadrv_signals.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_ldma.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/dmadrv_config.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h \
+ C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_power_manager_config.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/app_log_config.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\app\connect\component\sl_sensor_sink\sl_app_common.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\legacy_hal\inc\platform-header.h \
@@ -193,7 +191,14 @@ app_init.o: ../app_init.c \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_sensor_sink_config.h \
  ../app_process.h ../app_init.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\app-framework-common\app_framework_common.h
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\app-framework-common\app_framework_common.h \
+ ../API/hNetwork.h ../hplatform/hDriver/hADC.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_iadc.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_gpio.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu_compat.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\sli_em_cmu.h
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_component_catalog.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\app\common\util\app_log\app_log.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream.h:
@@ -201,29 +206,22 @@ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_handles.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_init_usart_instances.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_component_catalog.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_power_manager_config.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_gcc.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sli_code_classification.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h:
+C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_init_eusart_instances.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream_uart.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\fgm23\include\em_device.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\fgm23\include\fgm230sa27hgn.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\core_cm33.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_version.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_gcc.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\interrupt_manager\inc\arm\cmsis_nvic_virtual.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\interrupt_manager\inc\sl_interrupt_manager.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sli_code_classification.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\mpu_armv8.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\fgm23\include\system_fgm23.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\fgm23\include\fgm23_scratchpad.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\fgm23\include\fgm23_emu.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\fgm23\include\fgm23_cmu.h:
@@ -277,6 +275,11 @@ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\common\
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\s2_signals\dmadrv_signals.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_ldma.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/dmadrv_config.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h:
+C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_power_manager_config.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/app_log_config.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\app\connect\component\sl_sensor_sink\sl_app_common.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\legacy_hal\inc\platform-header.h:
@@ -390,3 +393,11 @@ C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_senso
 ../app_process.h:
 ../app_init.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\app-framework-common\app_framework_common.h:
+../API/hNetwork.h:
+../hplatform/hDriver/hADC.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_iadc.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_gpio.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu_compat.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\sli_em_cmu.h:

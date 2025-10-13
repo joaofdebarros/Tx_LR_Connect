@@ -180,7 +180,7 @@ autogen/sl_power_manager_handler.o: ../autogen/sl_power_manager_handler.c \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\byte-utilities.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\radio-stream.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\framework\sl-connect-power-manager.h \
- ../autogen/sl_iostream_init_usart_instances.h \
+ ../autogen/sl_iostream_init_eusart_instances.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream_uart.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\dmadrv.h \
@@ -370,7 +370,7 @@ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\in
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\byte-utilities.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\radio-stream.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\framework\sl-connect-power-manager.h:
-../autogen/sl_iostream_init_usart_instances.h:
+../autogen/sl_iostream_init_eusart_instances.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream_uart.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\dmadrv.h:

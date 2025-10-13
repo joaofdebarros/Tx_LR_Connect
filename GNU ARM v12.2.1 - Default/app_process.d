@@ -177,11 +177,7 @@ app_process.o: ../app_process.c \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_handles.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_init_usart_instances.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_component_catalog.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_power_manager_config.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
+ C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_init_eusart_instances.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream_uart.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\dmadrv.h \
@@ -189,20 +185,37 @@ app_process.o: ../app_process.c \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\s2_signals\dmadrv_signals.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_ldma.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/dmadrv_config.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h \
+ C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_power_manager_config.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/app_log_config.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\poll\poll.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\app\connect\component\sl_sensor_sink\sl_app_common.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_sensor_sink_config.h \
  ../app_process.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\app-framework-common\app_framework_common.h \
+ C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_simple_button_instances.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_simple_button.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_button.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h \
+ ../API/LED/led.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_simple_led_instances.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\leddrv\inc\sl_simple_led.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\leddrv\inc\sl_led.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_simple_button_instances.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_simple_button.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_button.h
+ ../API/hNetwork.h ../hplatform/hDriver/hDriver.h \
+ ../hplatform/hDriver/hGpio.h ../hplatform/hDriver/hTimer.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_timer.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu_compat.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_gpio.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\sli_em_cmu.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\ustimer\inc\ustimer.h \
+ C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/ustimer_config.h \
+ ../API/battery/battery.h \
+ C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect/hplatform/hDriver/hADC.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_iadc.h \
+ ../API/packet/pckDataStructure.h ../privAPI/Radio.h
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\legacy_hal\inc\platform-header.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h:
@@ -381,11 +394,7 @@ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostr
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_handles.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_init_usart_instances.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_component_catalog.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_power_manager_config.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h:
+C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_init_eusart_instances.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream_uart.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\dmadrv.h:
@@ -393,17 +402,37 @@ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\common\
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\s2_signals\dmadrv_signals.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_ldma.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/dmadrv_config.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h:
+C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_power_manager_config.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/app_log_config.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\poll\poll.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\app\connect\component\sl_sensor_sink\sl_app_common.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_sensor_sink_config.h:
 ../app_process.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\app-framework-common\app_framework_common.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_simple_led_instances.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\leddrv\inc\sl_simple_led.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\leddrv\inc\sl_led.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_simple_button_instances.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_simple_button.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_button.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h:
+../API/LED/led.h:
+C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_simple_led_instances.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\leddrv\inc\sl_simple_led.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\leddrv\inc\sl_led.h:
+../API/hNetwork.h:
+../hplatform/hDriver/hDriver.h:
+../hplatform/hDriver/hGpio.h:
+../hplatform/hDriver/hTimer.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_timer.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu_compat.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_gpio.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\sli_em_cmu.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\ustimer\inc\ustimer.h:
+C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/ustimer_config.h:
+../API/battery/battery.h:
+C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect/hplatform/hDriver/hADC.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_iadc.h:
+../API/packet/pckDataStructure.h:
+../privAPI/Radio.h:

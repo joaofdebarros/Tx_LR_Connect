@@ -3,7 +3,7 @@
   "specVersion" : "1.6",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2025-10-02T15:30:23Z",
+    "timestamp" : "2025-10-13T18:56:54Z",
     "authors" : [ {
       "name" : "Silicon Laboratories, Inc."
     } ],
@@ -15,18 +15,18 @@
   "components" : [ {
     "scope" : "required",
     "type" : "library",
-    "bom-ref" : "simplicity_sdk:2025.6.1",
+    "bom-ref" : "simplicity_sdk:2025.6.2",
     "name" : "Simplicity SDK Suite",
-    "version" : "2025.6.1",
+    "version" : "2025.6.2",
     "supplier" : {
       "name" : "Silicon Laboratories, Inc."
     },
     "components" : [ {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:FGM230SA27HGN",
+      "bom-ref" : "simplicity_sdk:2025.6.2:FGM230SA27HGN",
       "name" : "FGM230SA27HGN",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -36,9 +36,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:app_assert",
+      "bom-ref" : "simplicity_sdk:2025.6.2:app_assert",
       "name" : "Assert",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -48,9 +48,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:app_log",
+      "bom-ref" : "simplicity_sdk:2025.6.2:app_log",
       "name" : "Log",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -60,9 +60,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:board_control",
+      "bom-ref" : "simplicity_sdk:2025.6.2:board_control",
       "name" : "Board Control",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -72,9 +72,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:brd4002a",
+      "bom-ref" : "simplicity_sdk:2025.6.2:brd4002a",
       "name" : "BRD4002A",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -84,9 +84,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:brd4328b",
+      "bom-ref" : "simplicity_sdk:2025.6.2:brd4328b",
       "name" : "BRD4328B",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -96,9 +96,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:cli",
+      "bom-ref" : "simplicity_sdk:2025.6.2:cli",
       "name" : "CLI Instance(s)",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -108,9 +108,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:clock_manager",
+      "bom-ref" : "simplicity_sdk:2025.6.2:clock_manager",
       "name" : "Clock Manager",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -120,9 +120,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:connect_app_framework_common",
+      "bom-ref" : "simplicity_sdk:2025.6.2:connect_app_framework_common",
       "name" : "Application Framework Common",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -132,9 +132,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:connect_debug_print",
+      "bom-ref" : "simplicity_sdk:2025.6.2:connect_debug_print",
       "name" : "Debug Print",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -144,9 +144,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:connect_frequency_hopping",
+      "bom-ref" : "simplicity_sdk:2025.6.2:connect_frequency_hopping",
       "name" : "Frequency Hopping",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -156,9 +156,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:connect_mac_queue",
+      "bom-ref" : "simplicity_sdk:2025.6.2:connect_mac_queue",
       "name" : "MAC Queue",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -168,9 +168,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:connect_parent_support",
+      "bom-ref" : "simplicity_sdk:2025.6.2:connect_parent_support",
       "name" : "Parent Support",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -180,9 +180,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:connect_poll",
+      "bom-ref" : "simplicity_sdk:2025.6.2:connect_poll",
       "name" : "Poll",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -192,9 +192,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:connect_psa_security_library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:connect_psa_security_library",
       "name" : "AES Security (Library)",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -204,9 +204,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:connect_stack_common",
+      "bom-ref" : "simplicity_sdk:2025.6.2:connect_stack_common",
       "name" : "Stack Common",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -216,9 +216,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:connect_stack_counters",
+      "bom-ref" : "simplicity_sdk:2025.6.2:connect_stack_counters",
       "name" : "Stack Counters",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -228,9 +228,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:device_init",
+      "bom-ref" : "simplicity_sdk:2025.6.2:device_init",
       "name" : "Automatic Device Initialization",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -240,9 +240,21 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:i2cspm",
+      "bom-ref" : "simplicity_sdk:2025.6.2:gpiointerrupt",
+      "name" : "GPIOINT",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:i2cspm",
       "name" : "I2CSPM",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -252,9 +264,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:iostream_recommended_stream",
+      "bom-ref" : "simplicity_sdk:2025.6.2:iostream_recommended_stream",
       "name" : "IO Stream: Recommended Stream",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -264,9 +276,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:iostream_retarget_stdio",
+      "bom-ref" : "simplicity_sdk:2025.6.2:iostream_retarget_stdio",
       "name" : "IO Stream: Retarget STDIO",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -276,9 +288,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:mpu",
+      "bom-ref" : "simplicity_sdk:2025.6.2:mpu",
       "name" : "Simple MPU",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -288,9 +300,21 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:printf",
+      "bom-ref" : "simplicity_sdk:2025.6.2:mx25_flash_shutdown_usart",
+      "name" : "MX25 Flash Shutdown with usart",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:printf",
       "name" : "Tiny printf",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -300,9 +324,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:psa_its",
+      "bom-ref" : "simplicity_sdk:2025.6.2:psa_its",
       "name" : "PSA Persistent Storage Support (ITS)",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -331,9 +355,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:radio_config_simple_connect_singlephy",
+      "bom-ref" : "simplicity_sdk:2025.6.2:radio_config_simple_connect_singlephy",
       "name" : "Custom Radio Configuration for simple connect singlephy application",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -343,9 +367,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:restrictions_profile_connect_ofdm",
+      "bom-ref" : "simplicity_sdk:2025.6.2:restrictions_profile_connect_ofdm",
       "name" : "Restrictions - Connect OFDM Profile",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -355,9 +379,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:si70xx_driver",
+      "bom-ref" : "simplicity_sdk:2025.6.2:si70xx_driver",
       "name" : "Si70xx - Temperature/Humidity Sensor",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -367,9 +391,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:simple_button",
+      "bom-ref" : "simplicity_sdk:2025.6.2:simple_button",
       "name" : "Simple Button",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -379,9 +403,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:simple_led",
+      "bom-ref" : "simplicity_sdk:2025.6.2:simple_led",
       "name" : "Simple LED",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -391,9 +415,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:sl_main",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_main",
       "name" : "System Setup (sl_main)",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -403,9 +427,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:sl_rail_util_pti",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_rail_util_pti",
       "name" : "SL RAIL Utility, PTI",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -415,9 +439,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:sl_sensor_sink_core",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_sensor_sink_core",
       "name" : "Sensor/Sink Core",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -427,9 +451,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:token_manager",
+      "bom-ref" : "simplicity_sdk:2025.6.2:token_manager",
       "name" : "Legacy Token Manager",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -439,9 +463,21 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:dmadrv_core",
+      "bom-ref" : "simplicity_sdk:2025.6.2:ustimer",
+      "name" : "USTIMER",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:dmadrv_core",
       "name" : "DMADRV Core",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -451,9 +487,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:device_manager",
+      "bom-ref" : "simplicity_sdk:2025.6.2:device_manager",
       "name" : "Device Manager",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -463,9 +499,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:power_manager",
+      "bom-ref" : "simplicity_sdk:2025.6.2:power_manager",
       "name" : "Power Manager",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -475,9 +511,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:radio_config_simple_connect_singlephy_device_family_fgm23",
+      "bom-ref" : "simplicity_sdk:2025.6.2:radio_config_simple_connect_singlephy_device_family_fgm23",
       "name" : "Custom Radio Configuration for simple connect singlephy application",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -487,9 +523,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:led",
+      "bom-ref" : "simplicity_sdk:2025.6.2:led",
       "name" : "Generic LED API",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -499,9 +535,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_eusart",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_eusart",
       "name" : "EUSART",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -511,9 +547,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:bit",
+      "bom-ref" : "simplicity_sdk:2025.6.2:bit",
       "name" : "Bit Operations Library",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -523,9 +559,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:psa_driver_common",
+      "bom-ref" : "simplicity_sdk:2025.6.2:psa_driver_common",
       "name" : "PSA Driver Common Source Code",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -535,9 +571,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:brd4328b_config",
+      "bom-ref" : "simplicity_sdk:2025.6.2:brd4328b_config",
       "name" : "brd4328b config",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -547,9 +583,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:clock_manager_init_hal_s2",
+      "bom-ref" : "simplicity_sdk:2025.6.2:clock_manager_init_hal_s2",
       "name" : "Clock Manager Init HAL Series 2",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -559,9 +595,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:platform_version",
+      "bom-ref" : "simplicity_sdk:2025.6.2:platform_version",
       "name" : "Platform version",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -571,9 +607,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:psa_crypto_trng",
+      "bom-ref" : "simplicity_sdk:2025.6.2:psa_crypto_trng",
       "name" : "TRNG",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -583,9 +619,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:slist",
+      "bom-ref" : "simplicity_sdk:2025.6.2:slist",
       "name" : "Single Link List",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -595,9 +631,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:device_gpio",
+      "bom-ref" : "simplicity_sdk:2025.6.2:device_gpio",
       "name" : "Device Manager GPIO",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -607,9 +643,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_ldma",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_ldma",
       "name" : "LDMA",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -619,9 +655,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:nvm3_source",
+      "bom-ref" : "simplicity_sdk:2025.6.2:nvm3_source",
       "name" : "NVM3 Core (source)",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -631,9 +667,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:nvm3_default_config",
+      "bom-ref" : "simplicity_sdk:2025.6.2:nvm3_default_config",
       "name" : "NVM3 Default Config",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -643,9 +679,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:psa_crypto_config",
+      "bom-ref" : "simplicity_sdk:2025.6.2:psa_crypto_config",
       "name" : "Configuration",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -674,9 +710,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:iostream",
+      "bom-ref" : "simplicity_sdk:2025.6.2:iostream",
       "name" : "IO Stream",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -686,9 +722,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:psa_crypto_aes",
+      "bom-ref" : "simplicity_sdk:2025.6.2:psa_crypto_aes",
       "name" : "AES Block Cipher",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -717,9 +753,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:nvm3_lib",
+      "bom-ref" : "simplicity_sdk:2025.6.2:nvm3_lib",
       "name" : "NVM3 Core",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -729,9 +765,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:hal_prs",
+      "bom-ref" : "simplicity_sdk:2025.6.2:hal_prs",
       "name" : "PRS",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -741,9 +777,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:se_manager_crypto",
+      "bom-ref" : "simplicity_sdk:2025.6.2:se_manager_crypto",
       "name" : "Crypto",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -753,9 +789,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:device_init_dcdc",
+      "bom-ref" : "simplicity_sdk:2025.6.2:device_init_dcdc",
       "name" : "DC-DC Converter",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -765,9 +801,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:enum",
+      "bom-ref" : "simplicity_sdk:2025.6.2:enum",
       "name" : "Enumerations",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -777,9 +813,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:power_manager_core_impl_sleep_loop",
+      "bom-ref" : "simplicity_sdk:2025.6.2:power_manager_core_impl_sleep_loop",
       "name" : "Power Manager: Core implementation",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -789,9 +825,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:rail_lib_config_module",
+      "bom-ref" : "simplicity_sdk:2025.6.2:rail_lib_config_module",
       "name" : "RAIL Library, Radio Configurations for Modules",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -801,9 +837,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:memory_manager_retention_control",
+      "bom-ref" : "simplicity_sdk:2025.6.2:memory_manager_retention_control",
       "name" : "Memory Manager Retention Control",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -813,9 +849,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:nvm3_optimization_disable",
+      "bom-ref" : "simplicity_sdk:2025.6.2:nvm3_optimization_disable",
       "name" : "NVM3 disable optimization",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -825,9 +861,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:sl_main_memory_init",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_main_memory_init",
       "name" : "sl_main Setup",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -837,9 +873,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:atomic",
+      "bom-ref" : "simplicity_sdk:2025.6.2:atomic",
       "name" : "Atomic Operations Library",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -849,9 +885,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:code_classification",
+      "bom-ref" : "simplicity_sdk:2025.6.2:code_classification",
       "name" : "Code Classification",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -861,9 +897,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:connect_frequency_hopping_library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:connect_frequency_hopping_library",
       "name" : "Frequency Hopping (Library)",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -873,9 +909,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:configuration_over_swo",
+      "bom-ref" : "simplicity_sdk:2025.6.2:configuration_over_swo",
       "name" : "Configuration Over SWO",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -885,9 +921,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:memory_manager",
+      "bom-ref" : "simplicity_sdk:2025.6.2:memory_manager",
       "name" : "Memory Manager",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -897,9 +933,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:status",
+      "bom-ref" : "simplicity_sdk:2025.6.2:status",
       "name" : "Status Codes Definitions",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -909,9 +945,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_chip",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_chip",
       "name" : "CHIP",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -921,9 +957,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:rail_lib_singleprotocol",
+      "bom-ref" : "simplicity_sdk:2025.6.2:rail_lib_singleprotocol",
       "name" : "RAIL Library, Single Protocol",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -933,9 +969,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:memory_manager_pool",
+      "bom-ref" : "simplicity_sdk:2025.6.2:memory_manager_pool",
       "name" : "Memory Manager Memory Pool",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -945,9 +981,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:connect_mac_queue_library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:connect_mac_queue_library",
       "name" : "MAC Queue (Library)",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -957,9 +993,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_cmu",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_cmu",
       "name" : "CMU",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -969,9 +1005,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_syscfg",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_syscfg",
       "name" : "SYSCFG",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -981,9 +1017,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:trustzone_unaware",
+      "bom-ref" : "simplicity_sdk:2025.6.2:trustzone_unaware",
       "name" : "TrustZone Unaware",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -993,9 +1029,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:psa_se_driver",
+      "bom-ref" : "simplicity_sdk:2025.6.2:psa_se_driver",
       "name" : "PSA SE Driver Source Code",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1005,9 +1041,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:hfxo_manager",
+      "bom-ref" : "simplicity_sdk:2025.6.2:hfxo_manager",
       "name" : "HFXO Manager",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1017,9 +1053,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:dmadrv",
+      "bom-ref" : "simplicity_sdk:2025.6.2:dmadrv",
       "name" : "DMADRV",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1029,9 +1065,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:hal_common",
+      "bom-ref" : "simplicity_sdk:2025.6.2:hal_common",
       "name" : "Common Headers",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1041,9 +1077,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_i2c",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_i2c",
       "name" : "I2C",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1053,9 +1089,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:rail_util_pti",
+      "bom-ref" : "simplicity_sdk:2025.6.2:rail_util_pti",
       "name" : "RAIL Utility, PTI",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1065,9 +1101,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:device_peripheral_hal",
+      "bom-ref" : "simplicity_sdk:2025.6.2:device_peripheral_hal",
       "name" : "Device Manager Peripheral HAL",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1077,9 +1113,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:interrupt_manager",
+      "bom-ref" : "simplicity_sdk:2025.6.2:interrupt_manager",
       "name" : "Interrupt Manager",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1089,9 +1125,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:mbedtls_cipher",
+      "bom-ref" : "simplicity_sdk:2025.6.2:mbedtls_cipher",
       "name" : "Ciphers",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1120,9 +1156,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:ecode",
+      "bom-ref" : "simplicity_sdk:2025.6.2:ecode",
       "name" : "EMDRV Common Headers",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1132,9 +1168,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:iostream_uart_common",
+      "bom-ref" : "simplicity_sdk:2025.6.2:iostream_uart_common",
       "name" : "IO Stream: Common code for UART-type streams",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1144,9 +1180,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:psa_crypto",
+      "bom-ref" : "simplicity_sdk:2025.6.2:psa_crypto",
       "name" : "PSA Crypto",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1175,9 +1211,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_prs",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_prs",
       "name" : "PRS",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1187,9 +1223,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:silabs_core_buffer_manager",
+      "bom-ref" : "simplicity_sdk:2025.6.2:silabs_core_buffer_manager",
       "name" : "Buffer Manager",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1199,9 +1235,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:psa_driver",
+      "bom-ref" : "simplicity_sdk:2025.6.2:psa_driver",
       "name" : "Drivers for Crypto Acceleration",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1211,9 +1247,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:connect_stack_counters_library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:connect_stack_counters_library",
       "name" : "Stack Counters (Library)",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1223,9 +1259,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:clock_manager_runtime",
+      "bom-ref" : "simplicity_sdk:2025.6.2:clock_manager_runtime",
       "name" : "Clock Manager Runtime",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1235,9 +1271,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:psa_crypto_source",
+      "bom-ref" : "simplicity_sdk:2025.6.2:psa_crypto_source",
       "name" : "Source Code",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1266,9 +1302,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:memory_manager_retention_control_hal",
+      "bom-ref" : "simplicity_sdk:2025.6.2:memory_manager_retention_control_hal",
       "name" : "Memory Manager Retention Control HAL",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1278,9 +1314,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:udelay",
+      "bom-ref" : "simplicity_sdk:2025.6.2:udelay",
       "name" : "Microsecond Delay",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1290,9 +1326,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:sli_psec_osal",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sli_psec_osal",
       "name" : "OS Abstraction Layer",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1302,9 +1338,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:device_peripheral",
+      "bom-ref" : "simplicity_sdk:2025.6.2:device_peripheral",
       "name" : "Device Manager Peripheral",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1314,9 +1350,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:nvm3_default",
+      "bom-ref" : "simplicity_sdk:2025.6.2:nvm3_default",
       "name" : "NVM3 Default Instance",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1326,9 +1362,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:se_manager_mailbox",
+      "bom-ref" : "simplicity_sdk:2025.6.2:se_manager_mailbox",
       "name" : "SE mailbox utilities",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1338,9 +1374,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:se_manager_config",
+      "bom-ref" : "simplicity_sdk:2025.6.2:se_manager_config",
       "name" : "Config",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1350,9 +1386,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:power_manager_handler_implementation",
+      "bom-ref" : "simplicity_sdk:2025.6.2:power_manager_handler_implementation",
       "name" : "Power Manager: Handler",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1362,9 +1398,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:mbedtls_source",
+      "bom-ref" : "simplicity_sdk:2025.6.2:mbedtls_source",
       "name" : "Source Code",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1393,9 +1429,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_gpio",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_gpio",
       "name" : "GPIO",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1405,9 +1441,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:token_manager_nvm3",
+      "bom-ref" : "simplicity_sdk:2025.6.2:token_manager_nvm3",
       "name" : "Legacy Token Manager - NVM3 Extension",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1417,9 +1453,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_rmu",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_rmu",
       "name" : "RMU",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1429,9 +1465,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:simple_led_core",
+      "bom-ref" : "simplicity_sdk:2025.6.2:simple_led_core",
       "name" : "Simple LED Core",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1441,9 +1477,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:device_init_core",
+      "bom-ref" : "simplicity_sdk:2025.6.2:device_init_core",
       "name" : "Core",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1453,9 +1489,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:mbedtls_aes",
+      "bom-ref" : "simplicity_sdk:2025.6.2:mbedtls_aes",
       "name" : "AES Block Cipher",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1484,9 +1520,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:power_manager_core",
+      "bom-ref" : "simplicity_sdk:2025.6.2:power_manager_core",
       "name" : "Power Manager: Core",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1496,9 +1532,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:i2cspm_core",
+      "bom-ref" : "simplicity_sdk:2025.6.2:i2cspm_core",
       "name" : "I2CSPM Core",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1508,9 +1544,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:mbedtls_slcrypto_driver",
+      "bom-ref" : "simplicity_sdk:2025.6.2:mbedtls_slcrypto_driver",
       "name" : "Drivers for Silicon Labs Crypto Acceleration",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1520,9 +1556,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_system",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_system",
       "name" : "SYSTEM",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1532,9 +1568,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:cli_core",
+      "bom-ref" : "simplicity_sdk:2025.6.2:cli_core",
       "name" : "CLI Global Configuration",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1544,9 +1580,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:hal_gpio",
+      "bom-ref" : "simplicity_sdk:2025.6.2:hal_gpio",
       "name" : "GPIO",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1556,9 +1592,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:rail_lib",
+      "bom-ref" : "simplicity_sdk:2025.6.2:rail_lib",
       "name" : "RAIL Library, Core",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1568,9 +1604,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:se_manager",
+      "bom-ref" : "simplicity_sdk:2025.6.2:se_manager",
       "name" : "SE Manager",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1580,9 +1616,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:connect_stack_common_library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:connect_stack_common_library",
       "name" : "Stack Common (Library)",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1592,9 +1628,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:connect_parent_support_library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:connect_parent_support_library",
       "name" : "Parent Support (Library)",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1604,9 +1640,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:event_handler",
+      "bom-ref" : "simplicity_sdk:2025.6.2:event_handler",
       "name" : "Event Handler",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1616,9 +1652,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:memory_manager_region",
+      "bom-ref" : "simplicity_sdk:2025.6.2:memory_manager_region",
       "name" : "Memory Manager region",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1628,9 +1664,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_msc",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_msc",
       "name" : "MSC",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1640,9 +1676,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:device_i2c",
+      "bom-ref" : "simplicity_sdk:2025.6.2:device_i2c",
       "name" : "Device Manager I2C",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1652,9 +1688,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:power_manager_deepsleep",
+      "bom-ref" : "simplicity_sdk:2025.6.2:power_manager_deepsleep",
       "name" : "Power Manager: Deepsleep",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1664,9 +1700,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:debug_swo",
+      "bom-ref" : "simplicity_sdk:2025.6.2:debug_swo",
       "name" : "SWO Debug",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1676,9 +1712,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:interrupt_manager_cortexm",
+      "bom-ref" : "simplicity_sdk:2025.6.2:interrupt_manager_cortexm",
       "name" : "Interrupt Manager Cortex-M",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1688,9 +1724,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:rail_util_features",
+      "bom-ref" : "simplicity_sdk:2025.6.2:rail_util_features",
       "name" : "RAIL Library Features, Core",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1700,9 +1736,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_wdog",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_wdog",
       "name" : "WDOG",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1712,9 +1748,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:sl_string",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_string",
       "name" : "String Functions",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1724,9 +1760,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:mx25_flash_shutdown_eusart",
-      "name" : "MX25 Flash Shutdown with eusart",
-      "version" : "2025.6.1",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_usart",
+      "name" : "USART",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1736,9 +1772,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:rail_util_power_manager_init",
+      "bom-ref" : "simplicity_sdk:2025.6.2:rail_util_power_manager_init",
       "name" : "RAIL Utility, Power manager init",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1748,9 +1784,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:nvm3_default_flash_backend",
+      "bom-ref" : "simplicity_sdk:2025.6.2:nvm3_default_flash_backend",
       "name" : "NVM3 back-end for default instance in flash",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1760,9 +1796,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:connect_aes_security",
+      "bom-ref" : "simplicity_sdk:2025.6.2:connect_aes_security",
       "name" : "AES Security",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1772,9 +1808,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:device_clock_hal",
+      "bom-ref" : "simplicity_sdk:2025.6.2:device_clock_hal",
       "name" : "Device Manager Clock HAL",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1784,9 +1820,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:mbedtls_ccm",
+      "bom-ref" : "simplicity_sdk:2025.6.2:mbedtls_ccm",
       "name" : "CCM",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1815,9 +1851,21 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:mbedtls_slcrypto",
+      "bom-ref" : "simplicity_sdk:2025.6.2:iostream_eusart",
+      "name" : "IO Stream: EUSART",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:mbedtls_slcrypto",
       "name" : "Silicon Labs Mbed TLS support",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1827,9 +1875,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:button",
+      "bom-ref" : "simplicity_sdk:2025.6.2:button",
       "name" : "Generic Button API",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1839,9 +1887,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:sl_assert",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_assert",
       "name" : "Assert Functions",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1851,9 +1899,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:device_clock",
+      "bom-ref" : "simplicity_sdk:2025.6.2:device_clock",
       "name" : "Device Manager Clock",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1863,9 +1911,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:component_catalog",
+      "bom-ref" : "simplicity_sdk:2025.6.2:component_catalog",
       "name" : "Component Catalog",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1875,9 +1923,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_emu",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_emu",
       "name" : "EMU",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1887,9 +1935,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:rail_util_pa",
+      "bom-ref" : "simplicity_sdk:2025.6.2:rail_util_pa",
       "name" : "RAIL Utility, PA",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1899,9 +1947,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:clock_manager_runtime_hal_s2",
+      "bom-ref" : "simplicity_sdk:2025.6.2:clock_manager_runtime_hal_s2",
       "name" : "Clock Manager Runtime HAL Series 2",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1911,9 +1959,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_burtc",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_burtc",
       "name" : "BURTC",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1923,9 +1971,33 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_common",
+      "bom-ref" : "simplicity_sdk:2025.6.2:hal_eusart",
+      "name" : "EUSART",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:iostream_eusart_core",
+      "name" : "IO Stream: EUSART Core",
+      "version" : "2025.6.2",
+      "supplier" : {
+        "name" : "Silicon Laboratories, Inc."
+      },
+      "licenses" : [ {
+        "expression" : "Zlib"
+      } ]
+    }, {
+      "scope" : "required",
+      "type" : "library",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_common",
       "name" : "Common Headers",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1935,9 +2007,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:mbedtls_core",
+      "bom-ref" : "simplicity_sdk:2025.6.2:mbedtls_core",
       "name" : "Mbed TLS",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1966,9 +2038,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:sl_core",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_core",
       "name" : "core",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -1978,9 +2050,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:psa_crypto_ccm",
+      "bom-ref" : "simplicity_sdk:2025.6.2:psa_crypto_ccm",
       "name" : "CCM Mode",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2009,9 +2081,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:rail_util_built_in_phys",
+      "bom-ref" : "simplicity_sdk:2025.6.2:rail_util_built_in_phys",
       "name" : "RAIL Utility, Built-in PHYs Across HFXO Frequencies",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2021,9 +2093,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:iostream_stdlib_config",
+      "bom-ref" : "simplicity_sdk:2025.6.2:iostream_stdlib_config",
       "name" : "IO Stream: STDLIB Configuration",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2033,9 +2105,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:simple_button_core",
+      "bom-ref" : "simplicity_sdk:2025.6.2:simple_button_core",
       "name" : "Simple Button Configuration",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2045,9 +2117,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:mbedtls_platform_dynamic_memory_allocation_config_default",
+      "bom-ref" : "simplicity_sdk:2025.6.2:mbedtls_platform_dynamic_memory_allocation_config_default",
       "name" : "Default dynamic memory allocation macros for mbedtls",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2076,9 +2148,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:fem_util",
+      "bom-ref" : "simplicity_sdk:2025.6.2:fem_util",
       "name" : "Radio Utility, FEM",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2088,9 +2160,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:cmsis_core",
+      "bom-ref" : "simplicity_sdk:2025.6.2:cmsis_core",
       "name" : "CMSIS-Core",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2120,9 +2192,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_core",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_core",
       "name" : "CORE",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2132,9 +2204,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:hal_sysrtc",
+      "bom-ref" : "simplicity_sdk:2025.6.2:hal_sysrtc",
       "name" : "SYSRTC",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2144,9 +2216,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_timer",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_timer",
       "name" : "TIMER",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2156,9 +2228,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:sleeptimer",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sleeptimer",
       "name" : "Sleep Timer",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2168,9 +2240,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:psa_crypto_common",
+      "bom-ref" : "simplicity_sdk:2025.6.2:psa_crypto_common",
       "name" : "Common",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2199,9 +2271,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:FGM230SA27HGN_config",
+      "bom-ref" : "simplicity_sdk:2025.6.2:FGM230SA27HGN_config",
       "name" : "FGM230SA27HGN config",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2211,9 +2283,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:sl_common",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_common",
       "name" : "Common Functions",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2223,9 +2295,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:mbedtls_config",
+      "bom-ref" : "simplicity_sdk:2025.6.2:mbedtls_config",
       "name" : "Configuration",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2254,9 +2326,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:sl_main_init",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_main_init",
       "name" : "sl main Init",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2266,9 +2338,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:sl_main_process_action",
+      "bom-ref" : "simplicity_sdk:2025.6.2:sl_main_process_action",
       "name" : "sl_main Process Action",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2278,9 +2350,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:gpio",
+      "bom-ref" : "simplicity_sdk:2025.6.2:gpio",
       "name" : "GPIO Driver",
-      "version" : "2025.6.1",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },
@@ -2290,33 +2362,9 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:iostream_usart",
-      "name" : "IO Stream: USART",
-      "version" : "2025.6.1",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:iostream_usart_core",
-      "name" : "IO Stream: USART Core",
-      "version" : "2025.6.1",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
-      "bom-ref" : "simplicity_sdk:2025.6.1:emlib_usart",
-      "name" : "USART",
-      "version" : "2025.6.1",
+      "bom-ref" : "simplicity_sdk:2025.6.2:emlib_iadc",
+      "name" : "IADC",
+      "version" : "2025.6.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."
       },

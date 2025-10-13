@@ -45,6 +45,8 @@ int main(void)
   // component initialization will take place there.
   sl_main_init();
 
+  sl_mx25_flash_shutdown();
+
 #if defined(SL_CATALOG_KERNEL_PRESENT)
   // Start the kernel. The start task will be executed (Highest priority) to complete
   // the Simplicity SDK components initialization and the user app_init() hook function will be called.

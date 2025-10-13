@@ -187,11 +187,7 @@ app_cli.o: ../app_cli.c \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\cli\inc\sl_cli_arguments.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\app\common\util\app_log\app_log.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_handles.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_init_usart_instances.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_component_catalog.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_power_manager_config.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
+ C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_init_eusart_instances.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream_uart.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\dmadrv.h \
@@ -199,6 +195,9 @@ app_cli.o: ../app_cli.c \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\s2_signals\dmadrv_signals.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_ldma.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/dmadrv_config.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h \
+ C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_power_manager_config.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/app_log_config.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\app\connect\component\sl_sensor_sink\sl_app_common.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_sensor_sink_config.h \
@@ -392,11 +391,7 @@ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\cli\i
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\cli\inc\sl_cli_arguments.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\app\common\util\app_log\app_log.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_handles.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_init_usart_instances.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_component_catalog.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_power_manager_config.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h:
+C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_init_eusart_instances.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream_uart.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\dmadrv.h:
@@ -404,6 +399,9 @@ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\common\
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\s2_signals\dmadrv_signals.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_ldma.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/dmadrv_config.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h:
+C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_power_manager_config.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/app_log_config.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\app\connect\component\sl_sensor_sink\sl_app_common.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_sensor_sink_config.h:

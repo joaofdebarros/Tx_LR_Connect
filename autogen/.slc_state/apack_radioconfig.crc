@@ -2,10 +2,14 @@
   "generatedFiles" : [ "rail_config.c", "rail_config.h", "radioconf_generation_log.json" ],
   "apackName" : "apack_radioConfig",
   "equality" : {
-    "sdkId" : "com.silabs.sdk.stack.sisdk:2025.6.1",
+    "sdkId" : "com.silabs.sdk.stack.sisdk:2025.6.2",
     "generatorIds" : [ "com.silabs.ss.framework.ide.project.core.cdtMbsProjectType" ],
     "fileStates" : {
       "config\\rail\\radio_settings.radioconf" : {
+        "hash" : -2051066700,
+        "exists" : true
+      },
+      "config\\rail\\radio_settings.radioconf.bak" : {
         "hash" : 1476652998,
         "exists" : true
       }

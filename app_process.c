@@ -48,7 +48,12 @@
 #if defined(SL_CATALOG_KERNEL_PRESENT)
 #include "sl_power_manager.h"
 #endif
-
+#include "API/LED/led.h"
+#include "API/hNetwork.h"
+#include "hplatform/hDriver/hDriver.h"
+#include "API/battery/battery.h"
+#include "API/packet/pckDataStructure.h"
+#include "privAPI/Radio.h"
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
 // -----------------------------------------------------------------------------
@@ -76,47 +81,64 @@ uint16_t sensor_report_period_ms =  (1 * MILLISECOND_TICKS_PER_SECOND);
 /// TX options set up for the network
 EmberMessageOptions tx_options = EMBER_OPTIONS_ACK_REQUESTED | EMBER_OPTIONS_SECURITY_ENABLED;
 
+packet_void_t sendRadio;
 // -----------------------------------------------------------------------------
 //                                Static Variables
 // -----------------------------------------------------------------------------
 /// Destination of the currently processed sink node
 static EmberNodeId sink_node_id = EMBER_COORDINATOR_ADDRESS;
-bool register_control;
+bool registrado = false;
+bool Tx_cadastrado = false;
+bool button_is_pressed = false;
+uint32_t press_start_time = 0;
+uint16_t Vbat = 0;
 // -----------------------------------------------------------------------------
 //                          Public Function Definitions
 // -----------------------------------------------------------------------------
 void sl_button_on_change(const sl_button_t *handle)
 {
-
-  static uint32_t press_start_time = 0;
-
-    if (sl_button_get_state(handle) == SL_SIMPLE_BUTTON_RELEASED) {
+    if (sl_button_get_state(handle) == SL_SIMPLE_BUTTON_PRESSED) {
        if(&sl_button_btn0 == handle){
            press_start_time = sl_sleeptimer_get_tick_count();
+           button_is_pressed = true;
+           if(Tx_cadastrado){
+               led_blink(VERMELHO, 10, VERY_FAST_SPEED_BLINK);
+           }
        }
     }
 
-    if(sl_button_get_state(handle) == SL_SIMPLE_BUTTON_PRESSED){
+    if(sl_button_get_state(handle) == SL_SIMPLE_BUTTON_RELEASED){
         uint32_t current_time = sl_sleeptimer_get_tick_count();
-        if((current_time - press_start_time) > 100000){
-            emberResetNetworkState();
-        }else if((current_time - press_start_time) < 50000){
-            emberEventControlSetActive(*report_control);
+        button_is_pressed = false;
+//        if((current_time - press_start_time) > 100000){
+//            leave();
+//            sl_led_turn_on(&sl_led_led_vermelho);
+//        }else
+          if((current_time - press_start_time) < 50000){
+            if(!Tx_cadastrado){
+                join_sleepy(0);
+                hGpio_ledTurnOn(&sl_led_led_vermelho);
+            }else{
+//                led_blink(VERMELHO, 1, SLOW_SPEED_BLINK);
+                emberEventControlSetDelayMS(*report_control, sensor_report_period_ms);
+            }
+
         }
     }
 }
 
-//void app_button_press_cb(uint8_t button, uint8_t duration)
-//{
-//  if(button == 0){
-//      if(duration == APP_BUTTON_PRESS_DURATION_SHORT){
-//          emberEventControlSetActive(*report_control);
-//      }
-//      if(duration == APP_BUTTON_PRESS_DURATION_LONG){
-//         emberResetNetworkState();
-//      }
-//  }
-//}
+EmberStatus radio_send_packet(packet_void_t *pck){
+  uint8_t buffer_send[8];
+  EmberStatus status;
+
+  buffer_send[0] = pck->cmd;
+  for(uint8_t i = 0; i < (pck->len-1); i++){
+      buffer_send[i+1] = pck->data[i];
+  }
+  status = radioMessageSend(0,pck->len,buffer_send);
+
+  return status;
+}
 
 /**************************************************************************//**
  * Here we print out the first two bytes reported by the sinks as a little
@@ -124,60 +146,51 @@ void sl_button_on_change(const sl_button_t *handle)
  *****************************************************************************/
 void report_handler(void)
 {
-  EmberStatus status_join;
-  EmberNetworkParameters parameters;
-  if (!emberStackIsUp()) {
-      memset(&parameters, 0, sizeof(EmberNetworkParameters));
-      parameters.radioTxPower = 0;
-      parameters.radioChannel = 0;
-      parameters.panId = SL_SENSOR_SINK_PAN_ID;
-      emberClearSelectiveJoinPayload();
-      status_join = emberJoinNetwork(EMBER_STAR_END_DEVICE, &parameters);
-      emberEventControlSetInactive(*report_control);
-  } else {
-    EmberStatus status;
-    EmberStatus sensor_status;
-    uint8_t buffer[SL_SENSOR_SINK_DATA_LENGTH];
-    int32_t temp_data = 0;
-    uint32_t rh_data = 0;
-    EmberMessageLength len;
+  EmberStatus status;
+  static bool registrado = true;
+  uint8_t buffer[SL_SENSOR_SINK_DATA_LENGTH];
+//  EmberMessageLength len;
 
+  volatile Register_Sensor_t Register_Sensor;
 
-    if(register_control == true){
-          register_control = false;
+  Register_Sensor.Status.Type = CONTROL;
+  Register_Sensor.Status.range = LONG_RANGE;
 
-          buffer[0] = 15; //register
-          buffer[1] = 0b00000000;
-          len = 2;
-          memset(buffer+2,0,6);
-      }
-      else{
-          buffer[0] = 16; //register
-          buffer[1] = 1; //tecla: 1 a 4
-          buffer[2] = 0; //VBAT
-          buffer[3] = 0; //VBAT
-          len = 4;
-          memset(buffer+4,0,4);
-      }
+  if(registrado == true){
+      registrado = false;
 
+//      buffer[0] = 15; //register
+//      buffer[1] = 0b00000000;
+//      len = 2;
+//      memset(buffer+2,0,6);
+      sendRadio.cmd = REGISTRATION;
+      sendRadio.len = 2;
+      sendRadio.data[0] = Register_Sensor.Registerbyte;
+      Vbat = calculateVdd();
+  }
+  else{
+//      buffer[0] = 16; //register
+//      buffer[1] = 1; //tecla: 1 a 4
+//      buffer[2] = Vbat >> 8; //VBAT
+//      buffer[3] = Vbat; //VBAT
+//      len = 4;
+//      memset(buffer+4,0,4);
 
-
-      status = emberMessageSend(sink_node_id,
-                                SL_SENSOR_SINK_ENDPOINT, // endpoint
-                                0, // messageTag
-                                len,
-                                buffer,
-                                tx_options);
-
-      app_log_info("TX: Data to 0x%04X:", sink_node_id);
-      for (uint8_t i = 0; i < SL_SENSOR_SINK_DATA_LENGTH; i++) {
-        app_log_info(" %02X", buffer[i]);
-      }
-      app_log_info(": 0x%02X\n", status);
-      emberEventControlSetInactive(*report_control);
-      //emberEventControlSetDelayMS(*report_control, sensor_report_period_ms);
-    }
-
+      sendRadio.cmd = TX;
+      sendRadio.len = 4;
+      sendRadio.data[0] = 1;                          //Estado de Operação
+      sendRadio.data[1] = Vbat >> 8;                                //
+      sendRadio.data[2] = Vbat;                                     //
+  }
+  radio_send_packet(&sendRadio);
+//  status = emberMessageSend(sink_node_id,
+//                                SL_SENSOR_SINK_ENDPOINT, // endpoint
+//                                0, // messageTag
+//                                sendRadio.len,
+//                                &sendRadio,
+//                                tx_options);
+  Vbat = calculateVdd();
+  emberEventControlSetInactive(*report_control);
 }
 
 /**************************************************************************//**
@@ -228,22 +241,30 @@ void emberAfStackStatusCallback(EmberStatus status)
       app_log_info("Network up\n");
       app_log_info("Joined to Sink with node ID: 0x%04X\n", emberGetNodeId());
       // Schedule start of periodic sensor reporting to the Sink
-      register_control = true;
+      Tx_cadastrado = true;
+      enable_sleep = true;
+      led_blink(VERMELHO, 2, MED_SPEED_BLINK);
       emberEventControlSetDelayMS(*report_control, sensor_report_period_ms);
       break;
     case EMBER_NETWORK_DOWN:
       app_log_info("Network down\n");
+      Tx_cadastrado = false;
+      led_blink(VERMELHO, 5, FAST_SPEED_BLINK);
       break;
     case EMBER_JOIN_SCAN_FAILED:
+      led_blink(VERMELHO, 2, SLOW_SPEED_BLINK);
       app_log_error("Scanning during join failed\n");
       break;
     case EMBER_JOIN_DENIED:
+      led_blink(VERMELHO, 2, SLOW_SPEED_BLINK);
       app_log_error("Joining to the network rejected!\n");
       break;
     case EMBER_JOIN_TIMEOUT:
+      led_blink(VERMELHO, 2, SLOW_SPEED_BLINK);
       app_log_info("Join process timed out!\n");
       break;
     default:
+      led_blink(VERMELHO, 2, SLOW_SPEED_BLINK);
       app_log_info("Stack status: 0x%02X\n", status);
       break;
   }
@@ -255,13 +276,14 @@ void emberAfStackStatusCallback(EmberStatus status)
  *****************************************************************************/
 void emberAfTickCallback(void)
 {
-#if defined(SL_CATALOG_LED0_PRESENT)
-  if (emberStackIsUp()) {
-    sl_led_turn_on(&sl_led_led0);
-  } else {
-    sl_led_turn_off(&sl_led_led0);
-  }
-#endif
+
+  uint32_t current_time = sl_sleeptimer_get_tick_count();
+
+    if(button_is_pressed){
+        if((current_time - press_start_time) > 100000){
+            sl_led_turn_on(&sl_led_led_vermelho);
+        }
+    }
 }
 
 /**************************************************************************//**

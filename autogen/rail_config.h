@@ -2,7 +2,7 @@
  * @brief RAIL Configuration
  * @details
  *   WARNING: Auto-Generated Radio Config Header  -  DO NOT EDIT
- *   Radio Configurator Version: 2502.4.8
+ *   Radio Configurator Version: 2502.6.4
  *   RAIL Adapter Version: 2.4.33
  *   RAIL Compatibility: 2.x
  *******************************************************************************
@@ -43,7 +43,7 @@ extern uint32_t protocolAccelerationBuffer[];
 
 #define RADIO_CONFIG_XTAL_FREQUENCY 39000000UL
 
-#define RAIL0_CHANNEL_GROUP_1_PHY_LONGRANGE_915M_OQPSK_DSSS8_76P8KBPS
+#define RAIL0_CHANNEL_GROUP_1_PHY_LONGRANGE_915M_OQPSK_DSSS8_38P4KBPS
 #define RAIL0_CHANNEL_GROUP_1_PROFILE_LONG_RANGE
 extern const RAIL_ChannelConfig_t *channelConfigs[];
 

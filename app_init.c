@@ -41,7 +41,8 @@
 // Ensure that psa is initialized correctly
 #include "psa/crypto.h"
 #include "mbedtls/build_info.h"
-
+#include "API/hNetwork.h"
+#include "hplatform/hDriver/hADC.h"
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
 // -----------------------------------------------------------------------------
@@ -75,6 +76,9 @@ void emberAfInitCallback(void)
 
   // Ensure that psa is initialized correctly
   psa_crypto_init();
+
+  leave();
+  iadcInit();
 
   emberAfAllocateEvent(&report_control, &report_handler);
   // CLI info message

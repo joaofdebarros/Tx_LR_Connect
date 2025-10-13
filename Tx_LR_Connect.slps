@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <model:MDescriptors xmlns:model="http://www.silabs.com/ss/Studio.ecore">
   <descriptors name="Tx_LR_Connect">
-    <properties key="projectCommon.sdkId" value="com.silabs.sdk.stack.sisdk:2025.6.1._1641545500"/>
+    <properties key="projectCommon.sdkId" value="com.silabs.sdk.stack.sisdk:2025.6.2._1641545500"/>
     <properties key="universalConfig.relativeWorkspacePath" value="..\Tx_LR_Connect.slcw"/>
     <properties key="universalConfig.generationDirectory" value=""/>
     <properties key="universalConfig.toolchainCompatibility" value="iar gcc"/>

@@ -25,7 +25,7 @@ include:
   file_list:
   - {path: app_init.h}
   - {path: app_process.h}
-sdk: {id: simplicity_sdk, version: 2025.6.1}
+sdk: {id: simplicity_sdk, version: 2025.6.2}
 toolchain_settings:
 - {value: debug, option: optimize}
 component:
@@ -48,13 +48,14 @@ component:
 - {id: connect_stack_common}
 - {id: connect_stack_counters}
 - {id: device_init}
+- {id: emlib_iadc}
+- {id: gpiointerrupt}
 - instance: [sensor]
   id: i2cspm
 - {id: iostream_recommended_stream}
 - {id: iostream_retarget_stdio}
-- instance: [vcom]
-  id: iostream_usart
 - {id: mpu}
+- {id: mx25_flash_shutdown_usart}
 - {id: printf}
 - {id: psa_its}
 - {id: radio_config_simple_connect_singlephy}
@@ -62,12 +63,13 @@ component:
 - {id: si70xx_driver}
 - instance: [btn0]
   id: simple_button
-- instance: [led0, led1]
+- instance: [LED_VERMELHO]
   id: simple_led
 - {id: sl_main}
 - {id: sl_rail_util_pti}
 - {id: sl_sensor_sink_core}
 - {id: token_manager}
+- {id: ustimer}
 other_file:
 - {path: connect_create_gbl_image.bat}
 - {path: connect_create_gbl_image.sh}

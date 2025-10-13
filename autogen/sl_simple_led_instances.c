@@ -31,31 +31,16 @@
 #include "sl_simple_led.h"
 #include "sl_gpio.h"
 
-#include "sl_simple_led_led0_config.h"
-#include "sl_simple_led_led1_config.h"
+#include "sl_simple_led_LED_VERMELHO_config.h"
 
-sl_simple_led_context_t simple_led0_context = {
-  .port = SL_SIMPLE_LED_LED0_PORT,
-  .pin = SL_SIMPLE_LED_LED0_PIN,
-  .polarity = SL_SIMPLE_LED_LED0_POLARITY,
+sl_simple_led_context_t simple_led_vermelho_context = {
+  .port = SL_SIMPLE_LED_LED_VERMELHO_PORT,
+  .pin = SL_SIMPLE_LED_LED_VERMELHO_PIN,
+  .polarity = SL_SIMPLE_LED_LED_VERMELHO_POLARITY,
 };
 
-const sl_led_t sl_led_led0 = {
-  .context = &simple_led0_context,
-  .init = sl_simple_led_init,
-  .turn_on = sl_simple_led_turn_on,
-  .turn_off = sl_simple_led_turn_off,
-  .toggle = sl_simple_led_toggle,
-  .get_state = sl_simple_led_get_state,
-};
-sl_simple_led_context_t simple_led1_context = {
-  .port = SL_SIMPLE_LED_LED1_PORT,
-  .pin = SL_SIMPLE_LED_LED1_PIN,
-  .polarity = SL_SIMPLE_LED_LED1_POLARITY,
-};
-
-const sl_led_t sl_led_led1 = {
-  .context = &simple_led1_context,
+const sl_led_t sl_led_led_vermelho = {
+  .context = &simple_led_vermelho_context,
   .init = sl_simple_led_init,
   .turn_on = sl_simple_led_turn_on,
   .turn_off = sl_simple_led_turn_off,
@@ -64,12 +49,10 @@ const sl_led_t sl_led_led1 = {
 };
 
 const sl_led_t *sl_simple_led_array[] = {
-  &sl_led_led0,
-  &sl_led_led1
+  &sl_led_led_vermelho
 };
 
 void sl_simple_led_init_instances(void)
 {
-  sl_led_init(&sl_led_led0);
-  sl_led_init(&sl_led_led1);
+  sl_led_init(&sl_led_led_vermelho);
 }

@@ -47,7 +47,7 @@
 // <SL_GPIO_MODE_INPUT_PULL=> GPIO Input Pull
 // <SL_GPIO_MODE_INPUT_PULL_FILTER=> GPIO Input Pull Filter
 // <i> Default: gpioModeInput
-#define SL_SIMPLE_BUTTON_GPIO_MODE        SL_GPIO_MODE_INPUT
+#define SL_SIMPLE_BUTTON_GPIO_MODE        SL_GPIO_MODE_INPUT_PULL
 
 // <q SL_SIMPLE_BUTTON_GPIO_DOUT>
 // <i> SL_SIMPLE_BUTTON_GPIO_MODE == SL_GPIO_MODE_INPUT, Filter if DOUT is set
@@ -58,7 +58,7 @@
 // <i> 0  Active Low
 // <i> 1  Active High
 // <i> Default: 0
-#define SL_SIMPLE_BUTTON_POLARITY         0U
+#define SL_SIMPLE_BUTTON_POLARITY         1U
 
 // <q SL_SIMPLE_BUTTON_ALLOW_LED_CONFLICT> Allow the app to manage Buttons and LEDs on the same pin
 // <i> 0  Error if Buttons and LEDs are on the same pin
