@@ -77,7 +77,7 @@ void emberAfInitCallback(void)
   // Ensure that psa is initialized correctly
   psa_crypto_init();
 
-  leave();
+//  leave();
   iadcInit();
 
   emberAfAllocateEvent(&report_control, &report_handler);

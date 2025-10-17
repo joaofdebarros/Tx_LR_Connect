@@ -22,8 +22,9 @@
  * Enumerates
  */
 typedef enum SensorCmd_e{
-  TX = 16,
-  REGISTRATION = 21,
+  TX_REGISTRATION = 15,
+  TX_CMD = 16,
+  IVP_REGISTRATION = 21,
   MOTION_DETECTED = 22,
   SETUP_IVP,
 	KEEP_ALIVE,

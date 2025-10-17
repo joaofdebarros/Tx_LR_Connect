@@ -114,12 +114,17 @@ void sl_button_on_change(const sl_button_t *handle)
 //            leave();
 //            sl_led_turn_on(&sl_led_led_vermelho);
 //        }else
-          if((current_time - press_start_time) < 50000){
+
+        if(current_time < 60000 && Tx_cadastrado){
+            leave();
+        }
+
+        if((current_time - press_start_time) < 50000){
             if(!Tx_cadastrado){
                 join_sleepy(0);
                 hGpio_ledTurnOn(&sl_led_led_vermelho);
             }else{
-//                led_blink(VERMELHO, 1, SLOW_SPEED_BLINK);
+//                  led_blink(VERMELHO, 1, SLOW_SPEED_BLINK);
                 emberEventControlSetDelayMS(*report_control, sensor_report_period_ms);
             }
 
@@ -147,48 +152,32 @@ EmberStatus radio_send_packet(packet_void_t *pck){
 void report_handler(void)
 {
   EmberStatus status;
-  static bool registrado = true;
+  static bool registrado = false;
   uint8_t buffer[SL_SENSOR_SINK_DATA_LENGTH];
-//  EmberMessageLength len;
 
   volatile Register_Sensor_t Register_Sensor;
 
   Register_Sensor.Status.Type = CONTROL;
   Register_Sensor.Status.range = LONG_RANGE;
 
-  if(registrado == true){
-      registrado = false;
-
-//      buffer[0] = 15; //register
-//      buffer[1] = 0b00000000;
-//      len = 2;
-//      memset(buffer+2,0,6);
-      sendRadio.cmd = REGISTRATION;
+  if(!registrado){
+      sendRadio.cmd = TX_REGISTRATION;
       sendRadio.len = 2;
       sendRadio.data[0] = Register_Sensor.Registerbyte;
       Vbat = calculateVdd();
+
+      registrado = true;
   }
   else{
-//      buffer[0] = 16; //register
-//      buffer[1] = 1; //tecla: 1 a 4
-//      buffer[2] = Vbat >> 8; //VBAT
-//      buffer[3] = Vbat; //VBAT
-//      len = 4;
-//      memset(buffer+4,0,4);
 
-      sendRadio.cmd = TX;
+      sendRadio.cmd = TX_CMD;
       sendRadio.len = 4;
       sendRadio.data[0] = 1;                          //Estado de Operação
-      sendRadio.data[1] = Vbat >> 8;                                //
-      sendRadio.data[2] = Vbat;                                     //
+      sendRadio.data[1] = Vbat >> 8;                  //Bateria
+      sendRadio.data[2] = Vbat;                       //Bateria
   }
   radio_send_packet(&sendRadio);
-//  status = emberMessageSend(sink_node_id,
-//                                SL_SENSOR_SINK_ENDPOINT, // endpoint
-//                                0, // messageTag
-//                                sendRadio.len,
-//                                &sendRadio,
-//                                tx_options);
+
   Vbat = calculateVdd();
   emberEventControlSetInactive(*report_control);
 }
