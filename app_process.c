@@ -132,6 +132,21 @@ void sl_button_on_change(const sl_button_t *handle)
     }
 }
 
+//void app_button_press_cb(uint8_t button, uint8_t duration)
+//{
+//  if(duration < 3){
+//      if(Tx_cadastrado){
+//          led_blink(VERMELHO, 10, VERY_FAST_SPEED_BLINK);
+//          emberEventControlSetDelayMS(*report_control, sensor_report_period_ms);
+//      }else{
+//          join_sleepy(0);
+//          hGpio_ledTurnOn(&sl_led_led_vermelho);
+//      }
+//  }else{
+//      leave();
+//  }
+//}
+
 EmberStatus radio_send_packet(packet_void_t *pck){
   uint8_t buffer_send[8];
   EmberStatus status;

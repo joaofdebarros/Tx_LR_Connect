@@ -56,6 +56,8 @@ int main(void)
   // User provided code.
   app_init();
 
+//  app_button_press_enable();
+
   while (1) {
     // Silicon Labs components process action routine
     // must be called from the super loop.
