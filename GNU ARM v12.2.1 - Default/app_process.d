@@ -215,7 +215,7 @@ app_process.o: ../app_process.c \
  ../API/battery/battery.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect/hplatform/hDriver/hADC.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_iadc.h \
- ../API/packet/pckDataStructure.h ../privAPI/Radio.h
+ ../privAPI/Radio.h
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\legacy_hal\inc\platform-header.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h:
@@ -434,5 +434,4 @@ C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/ustimer_
 ../API/battery/battery.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect/hplatform/hDriver/hADC.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_iadc.h:
-../API/packet/pckDataStructure.h:
 ../privAPI/Radio.h:

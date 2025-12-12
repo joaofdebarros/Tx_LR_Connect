@@ -103,12 +103,12 @@
 #define SL_IOSTREAM_EUSART_VCOM_TX_PIN           8
 #endif
 
-// EUSART0 RX on PA09
+// EUSART0 RX on PA06
 #ifndef SL_IOSTREAM_EUSART_VCOM_RX_PORT         
 #define SL_IOSTREAM_EUSART_VCOM_RX_PORT          SL_GPIO_PORT_A
 #endif
 #ifndef SL_IOSTREAM_EUSART_VCOM_RX_PIN          
-#define SL_IOSTREAM_EUSART_VCOM_RX_PIN           9
+#define SL_IOSTREAM_EUSART_VCOM_RX_PIN           6
 #endif
 
 // EUSART0 CTS on PA10

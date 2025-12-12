@@ -45,7 +45,7 @@ int main(void)
   // component initialization will take place there.
   sl_main_init();
 
-  sl_mx25_flash_shutdown();
+  app_button_press_enable();
 
 #if defined(SL_CATALOG_KERNEL_PRESENT)
   // Start the kernel. The start task will be executed (Highest priority) to complete
@@ -55,8 +55,6 @@ int main(void)
 
   // User provided code.
   app_init();
-
-//  app_button_press_enable();
 
   while (1) {
     // Silicon Labs components process action routine

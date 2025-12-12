@@ -58,7 +58,7 @@
 extern EmberKeyData security_key;
 /// Connect security key id
 extern psa_key_id_t security_key_id;
-
+extern EmberEventControl *report_control;
 // -----------------------------------------------------------------------------
 //                                Static Variables
 // -----------------------------------------------------------------------------
@@ -71,16 +71,15 @@ extern psa_key_id_t security_key_id;
 ******************************************************************************/
 void emberAfInitCallback(void)
 {
-  uint8_t device_id = 0;
   EmberStatus em_status = EMBER_ERR_FATAL;
 
   // Ensure that psa is initialized correctly
   psa_crypto_init();
 
-//  leave();
   iadcInit();
 
   emberAfAllocateEvent(&report_control, &report_handler);
+
   // CLI info message
   app_log_info("\nSensor\n");
 

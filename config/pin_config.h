@@ -159,12 +159,12 @@
 #define EUSART0_RTS_PIN                          0
 #endif
 
-// EUSART0 RX on PA09
+// EUSART0 RX on PA06
 #ifndef EUSART0_RX_PORT                         
 #define EUSART0_RX_PORT                          SL_GPIO_PORT_A
 #endif
 #ifndef EUSART0_RX_PIN                          
-#define EUSART0_RX_PIN                           9
+#define EUSART0_RX_PIN                           6
 #endif
 
 // EUSART0 TX on PA08
@@ -219,6 +219,34 @@
 #endif
 #ifndef Verde_PIN                               
 #define Verde_PIN                                8
+#endif
+
+#ifndef BT4_PORT                                
+#define BT4_PORT                                 SL_GPIO_PORT_B
+#endif
+#ifndef BT4_PIN                                 
+#define BT4_PIN                                  0
+#endif
+
+#ifndef BT3_PORT                                
+#define BT3_PORT                                 SL_GPIO_PORT_B
+#endif
+#ifndef BT3_PIN                                 
+#define BT3_PIN                                  1
+#endif
+
+#ifndef BT2_PORT                                
+#define BT2_PORT                                 SL_GPIO_PORT_B
+#endif
+#ifndef BT2_PIN                                 
+#define BT2_PIN                                  2
+#endif
+
+#ifndef BT1_PORT                                
+#define BT1_PORT                                 SL_GPIO_PORT_B
+#endif
+#ifndef BT1_PIN                                 
+#define BT1_PIN                                  3
 #endif
 
 // [CUSTOM_PIN_NAME]$

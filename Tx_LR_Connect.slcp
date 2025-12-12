@@ -31,6 +31,7 @@ toolchain_settings:
 component:
 - {id: FGM230SA27HGN}
 - {id: app_assert}
+- {id: app_button_press}
 - {id: app_log}
 - {id: board_control}
 - {id: brd4002a}
@@ -61,7 +62,7 @@ component:
 - {id: radio_config_simple_connect_singlephy}
 - {id: restrictions_profile_connect_ofdm}
 - {id: si70xx_driver}
-- instance: [btn0]
+- instance: [btn0, btn1, btn2, btn3]
   id: simple_button
 - instance: [LED_VERMELHO]
   id: simple_led

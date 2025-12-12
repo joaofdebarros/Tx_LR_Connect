@@ -51,7 +51,7 @@
 #define SL_SIMPLE_LED_LED_VERMELHO_PORT          SL_GPIO_PORT_A
 #endif
 #ifndef SL_SIMPLE_LED_LED_VERMELHO_PIN          
-#define SL_SIMPLE_LED_LED_VERMELHO_PIN           7
+#define SL_SIMPLE_LED_LED_VERMELHO_PIN           9
 #endif
 // [GPIO_SL_SIMPLE_LED_LED_VERMELHO]$
 
