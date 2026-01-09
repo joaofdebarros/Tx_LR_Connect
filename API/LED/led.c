@@ -16,6 +16,7 @@ void led_blink(uint8_t led, uint8_t blinks, uint16_t speed){
   led_target = led;
   blink_target = blinks;
 
+  sl_sleeptimer_stop_timer(&periodic_timer);
   sl_sleeptimer_start_periodic_timer_ms(&periodic_timer,speed,led_handler, NULL,0,SL_SLEEPTIMER_NO_HIGH_PRECISION_HF_CLOCKS_REQUIRED_FLAG);
 }
 

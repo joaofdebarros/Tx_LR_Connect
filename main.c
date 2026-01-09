@@ -38,6 +38,12 @@
 #include "sl_main_process_action.h"
 #endif // SL_CATALOG_KERNEL_PRESENT
 
+#include "hplatform/hDriver/hADC.h"
+#include "API/hNetwork.h"
+
+uint8_t tx_power = 0;
+uint16_t Vbat = 0;
+
 int main(void)
 {
   // Initialize Silicon Labs device, system, service(s) and protocol stack(s).
@@ -46,6 +52,9 @@ int main(void)
   sl_main_init();
 
   app_button_press_enable();
+
+  set_tx(tx_power);
+  iadcInit();
 
 #if defined(SL_CATALOG_KERNEL_PRESENT)
   // Start the kernel. The start task will be executed (Highest priority) to complete

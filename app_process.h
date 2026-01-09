@@ -63,10 +63,10 @@ typedef enum{
   GATE
 }Type;
 
-typedef enum{
-  DISARMED = 0,
-  ARMED
-}Status_Central_t;
+//typedef enum{
+//  DISARMED = 0,
+//  ARMED
+//}Status_Central_t;
 
 typedef enum{
   SUCCESS,
@@ -88,7 +88,6 @@ typedef enum SensorCmd_e{
   KEEP_ALIVE,
   STATUS_CENTRAL,
   TAMPER,
-
 
   CMD_UNKNOWN = 0xFF
 }SensorCmd_e;
@@ -118,31 +117,27 @@ typedef struct{
     uint8_t len;
 }packet_void_t;
 
-typedef union
-{
-    uint8_t Statusbyte;
-
-    struct
-    {
-        Status_Operation_t operation          :2;
-        Status_Central_t statusCentral        :1;
-        uint8_t reserved                      :5;
-    } Status;
-
-}
-SensorStatus_t;
+//typedef union
+//{
+//    uint8_t Statusbyte;
+//
+//    struct
+//    {
+//        Status_Operation_t operation          :3;
+//        uint8_t reserved                      :5;
+//    } Status;
+//
+//}
+//SensorStatus_t;
 
 typedef struct{
   packet_void_t Packet;
   SensorCmd_e LastCMD;
-  TX_config_error_e error;
 }application_radio_t;
 
 typedef struct{
   application_radio_t radio;
-  SensorStatus_t SensorStatus;
   Status_Operation_t Status_Operation;
-  Status_Central_t Status_Central;
   uint8_t tecla;
 }application_t;
 
@@ -157,5 +152,6 @@ extern application_t application;
  * endian 16-bits decimal.
  *****************************************************************************/
 void report_handler(void);
-
+void em4_handler(void);
+void reset_parameters(void);
 #endif  // APP_PROCESS_H

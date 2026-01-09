@@ -53,6 +53,8 @@
 #include "hplatform/hDriver/hDriver.h"
 #include "API/battery/battery.h"
 #include "privAPI/Radio.h"
+#include "sl_power_manager.h"
+#include "API/memory/memory.h"
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
 // -----------------------------------------------------------------------------
@@ -73,8 +75,10 @@
 // -----------------------------------------------------------------------------
 /// Global flag set by a button push to allow or disallow entering to sleep
 bool enable_sleep = false;
+bool adc_read = false;
 /// report timing event control
 EmberEventControl *report_control;
+EmberEventControl *EM4_timeout;
 /// report timing period
 uint16_t sensor_report_period_ms =  (1 * MILLISECOND_TICKS_PER_SECOND);
 /// TX options set up for the network
@@ -83,6 +87,7 @@ EmberMessageOptions tx_options = EMBER_OPTIONS_ACK_REQUESTED | EMBER_OPTIONS_SEC
 packet_void_t sendRadio;
 
 application_t application;
+extern uint8_t tx_power;
 // -----------------------------------------------------------------------------
 //                                Static Variables
 // -----------------------------------------------------------------------------
@@ -92,63 +97,44 @@ bool registrado = false;
 bool Tx_cadastrado = false;
 bool button_is_pressed = false;
 uint32_t press_start_time = 0;
-uint16_t Vbat = 0;
+extern uint16_t Vbat;
+
 // -----------------------------------------------------------------------------
 //                          Public Function Definitions
 // -----------------------------------------------------------------------------
-//void sl_button_on_change(const sl_button_t *handle)
-//{
-//    if (sl_button_get_state(handle) == SL_SIMPLE_BUTTON_PRESSED) {
-//       if(&sl_button_btn0 == handle){
-//           press_start_time = sl_sleeptimer_get_tick_count();
-//           button_is_pressed = true;
-//           if(Tx_cadastrado){
-//               led_blink(VERMELHO, 10, VERY_FAST_SPEED_BLINK);
-//           }
-//       }
-//    }
-//
-//    if(sl_button_get_state(handle) == SL_SIMPLE_BUTTON_RELEASED){
-//        uint32_t current_time = sl_sleeptimer_get_tick_count();
-//        button_is_pressed = false;
-//        if((current_time - press_start_time) > 100000){
-//            leave();
-//            sl_led_turn_on(&sl_led_led_vermelho);
-//        }else
-//
-//        if(current_time < 60000 && Tx_cadastrado){
-//            leave();
-//        }
-//
-//        if((current_time - press_start_time) < 50000){
-//            if(!Tx_cadastrado){
-//                join_sleepy(0);
-//                hGpio_ledTurnOn(&sl_led_led_vermelho);
-//            }else{
-//                  led_blink(VERMELHO, 1, SLOW_SPEED_BLINK);
-//                emberEventControlSetDelayMS(*report_control, sensor_report_period_ms);
-//            }
-//
-//        }
-//    }
-//}
-
 
 void app_button_press_cb(uint8_t button, uint8_t duration)
 {
-  if(button == 3 && duration < 3){
+  if(button == 2 && duration < 3){
       join_sleepy(0);
       sl_led_turn_on(&sl_led_led_vermelho);
-  }else if(button == 3 && duration <= 3){
+      emberEventControlSetInactive(*EM4_timeout);
+  }else if(button == 2 && duration <= 3){
       leave();
+      reset_parameters();
+      emberEventControlSetDelayMS(*EM4_timeout,2000);
   }else{
+
       application.radio.LastCMD = TX_CMD_BT;
-      application.tecla = button;
+      application.tecla = button + 1;
 
       led_blink(VERMELHO, 10, VERY_FAST_SPEED_BLINK);
 
-      emberEventControlSetActive(*report_control);
+      emberEventControlSetDelayMS(*report_control,200);
   }
+}
+
+void reset_parameters(){
+  memory_erase(TXPOWER_MEMORY_KEY);
+  memory_erase(STATUSOP_MEMORY_KEY);
+
+  tx_power = 150;
+  set_tx(tx_power);
+  application.Status_Operation = WAIT_REGISTRATION;
+
+  memory_write(STATUSOP_MEMORY_KEY, &application.Status_Operation, sizeof(application.Status_Operation));
+  memory_write(TXPOWER_MEMORY_KEY, &tx_power, sizeof(tx_power));
+
 }
 
 EmberStatus radio_send_packet(packet_void_t *pck){
@@ -164,18 +150,44 @@ EmberStatus radio_send_packet(packet_void_t *pck){
   return status;
 }
 
+void em4_handler(void){
+  bool button_state = GPIO_PinInGet(gpioPortB, 1);
+
+  if(adc_read){
+      adc_read = false;
+      if(button_state == false){
+          Vbat = calculateVdd();
+          if(Vbat != 0){
+              memory_write(BATTERY_MEMORY_KEY, &Vbat, sizeof(Vbat));
+          }
+          sl_power_manager_enter_em4();
+          emberEventControlSetInactive(*EM4_timeout);
+      }else{
+          emberEventControlSetDelayMS(*EM4_timeout,2000);
+      }
+  }else{
+      adc_read = true;
+      Vbat = calculateVdd();
+      hGpio_ledTurnOff(&sl_led_led_vermelho);
+      emberEventControlSetDelayMS(*EM4_timeout,500);
+  }
+
+}
+
 /**************************************************************************//**
  * Here we print out the first two bytes reported by the sinks as a little
  * endian 16-bits decimal.
  *****************************************************************************/
 void report_handler(void)
 {
+//  Vbat = calculateVdd();
   volatile Register_Sensor_t Register_Sensor;
-
-  Vbat = calculateVdd();
 
   switch (application.Status_Operation) {
       case WAIT_REGISTRATION:
+        Register_Sensor.Status.Type = REMOTE_CONTROL;
+        Register_Sensor.Status.range = LONG_RANGE;
+
         sendRadio.cmd = TX_REGISTRATION;
         sendRadio.len = 2;
         sendRadio.data[0] = Register_Sensor.Registerbyte;
@@ -183,20 +195,12 @@ void report_handler(void)
         break;
 
       case OPERATION_MODE:
-        volatile SensorStatus_t SensorStatus;
-
-        SensorStatus.Status.operation = application.Status_Operation;
-        SensorStatus.Status.statusCentral = application.Status_Central;
-
         if(application.radio.LastCMD == TX_CMD_BT){
-            Register_Sensor.Status.Type = REMOTE_CONTROL;
-            Register_Sensor.Status.range = LONG_RANGE;
-
             sendRadio.cmd = TX_CMD_BT;
-            sendRadio.len = 5;
+            sendRadio.len = 4;
             sendRadio.data[0] = application.tecla;          //Tecla
-            sendRadio.data[1] = Vbat >> 8;                  //Bateria
-            sendRadio.data[2] = Vbat;
+            sendRadio.data[1] = Vbat;                  //Bateria
+            sendRadio.data[2] = Vbat >> 8;
         }
 
         break;
@@ -208,7 +212,9 @@ void report_handler(void)
   radio_send_packet(&sendRadio);
 
   Vbat = calculateVdd();
+
   emberEventControlSetInactive(*report_control);
+  emberEventControlSetDelayMS(*EM4_timeout,2000);
 }
 
 /**************************************************************************//**
@@ -245,14 +251,9 @@ void emberAfMessageSentCallback(EmberStatus status,
 {
   if(message->payload[0] == TX_REGISTRATION && application.Status_Operation == WAIT_REGISTRATION && status == EMBER_SUCCESS){
       //Estado inicial do sensor apos cadastro
-//      TurnPIROff(application.IVP.SensorStatus.Status.energy_mode);
       application.Status_Operation = OPERATION_MODE;
-      application.Status_Central = ARMED;
-//      application.IVP.SensorStatus.Status.energy_mode = CONTINUOUS;
-//
-//      memory_write(STATUSOP_MEMORY_KEY, &application.Status_Operation, sizeof(application.Status_Operation));
-//      memory_write(STATUSCENTRAL_MEMORY_KEY, &application.Status_Central, sizeof(application.Status_Central));
-//      memory_write(STATUSBYTE_MEMORY_KEY, &application.IVP.SensorStatus.Statusbyte, sizeof(application.IVP.SensorStatus.Statusbyte));
+
+      memory_write(STATUSOP_MEMORY_KEY, &application.Status_Operation, sizeof(application.Status_Operation));
   }
 }
 
@@ -270,8 +271,6 @@ void emberAfStackStatusCallback(EmberStatus status)
       if(application.Status_Operation == WAIT_REGISTRATION){
           emberEventControlSetDelayMS(*report_control, sensor_report_period_ms);
       }
-
-      emberEventControlSetDelayMS(*report_control, sensor_report_period_ms);
       break;
     case EMBER_NETWORK_DOWN:
       Tx_cadastrado = false;
@@ -290,6 +289,8 @@ void emberAfStackStatusCallback(EmberStatus status)
       led_blink(VERMELHO, 2, SLOW_SPEED_BLINK);
       break;
   }
+
+  emberEventControlSetDelayMS(*EM4_timeout,6000);
 }
 
 /**************************************************************************//**
@@ -299,13 +300,6 @@ void emberAfStackStatusCallback(EmberStatus status)
 void emberAfTickCallback(void)
 {
 
-  uint32_t current_time = sl_sleeptimer_get_tick_count();
-
-    if(button_is_pressed){
-        if((current_time - press_start_time) > 100000){
-            sl_led_turn_on(&sl_led_led_vermelho);
-        }
-    }
 }
 
 /**************************************************************************//**
