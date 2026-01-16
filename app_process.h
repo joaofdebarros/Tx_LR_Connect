@@ -154,4 +154,5 @@ extern application_t application;
 void report_handler(void);
 void em4_handler(void);
 void reset_parameters(void);
+void battery_read();
 #endif  // APP_PROCESS_H

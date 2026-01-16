@@ -66,6 +66,8 @@
 #define APP_BUTTON_PRESS_DURATION_VERYLONG     3
 #define APP_BUTTON_PRESS_NONE                  4
 #define APP_BUTTON_PRESS_PRESSED_DOWN          5
+
+#define ALPHA 0.1f
 // -----------------------------------------------------------------------------
 //                          Static Function Declarations
 // -----------------------------------------------------------------------------
@@ -150,16 +152,29 @@ EmberStatus radio_send_packet(packet_void_t *pck){
   return status;
 }
 
+void battery_read(){
+  uint16_t reading = 0;
+
+  reading = calculateVdd();
+
+  if(reading != 0){
+      if(Vbat == 0){
+          Vbat = reading;
+      }else{
+          Vbat = ALPHA * reading + (1.0f - ALPHA) * Vbat;
+      }
+  }
+
+  memory_write(BATTERY_MEMORY_KEY, &Vbat, sizeof(Vbat));
+}
+
 void em4_handler(void){
   bool button_state = GPIO_PinInGet(gpioPortB, 1);
 
   if(adc_read){
       adc_read = false;
       if(button_state == false){
-          Vbat = calculateVdd();
-          if(Vbat != 0){
-              memory_write(BATTERY_MEMORY_KEY, &Vbat, sizeof(Vbat));
-          }
+          battery_read();
           sl_power_manager_enter_em4();
           emberEventControlSetInactive(*EM4_timeout);
       }else{
@@ -167,9 +182,9 @@ void em4_handler(void){
       }
   }else{
       adc_read = true;
-      Vbat = calculateVdd();
+      battery_read();
       hGpio_ledTurnOff(&sl_led_led_vermelho);
-      emberEventControlSetDelayMS(*EM4_timeout,500);
+      emberEventControlSetDelayMS(*EM4_timeout,10);
   }
 
 }
@@ -211,7 +226,7 @@ void report_handler(void)
 
   radio_send_packet(&sendRadio);
 
-  Vbat = calculateVdd();
+  battery_read();
 
   emberEventControlSetInactive(*report_control);
   emberEventControlSetDelayMS(*EM4_timeout,2000);
