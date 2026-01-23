@@ -55,6 +55,8 @@
 #include "privAPI/Radio.h"
 #include "sl_power_manager.h"
 #include "API/memory/memory.h"
+#include "hplatform/hDriver/hADC.h"
+#include "callbacks/callbacks.h"
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
 // -----------------------------------------------------------------------------
@@ -78,9 +80,12 @@
 /// Global flag set by a button push to allow or disallow entering to sleep
 bool enable_sleep = false;
 bool adc_read = false;
+bool initialized = false;
 /// report timing event control
 EmberEventControl *report_control;
 EmberEventControl *EM4_timeout;
+EmberEventControl *Init_control;
+EmberEventControl *radio_control;
 /// report timing period
 uint16_t sensor_report_period_ms =  (1 * MILLISECOND_TICKS_PER_SECOND);
 /// TX options set up for the network
@@ -89,28 +94,66 @@ EmberMessageOptions tx_options = EMBER_OPTIONS_ACK_REQUESTED | EMBER_OPTIONS_SEC
 packet_void_t sendRadio;
 
 application_t application;
-extern uint8_t tx_power;
+
+uint8_t tx_power = 0;
+uint16_t Vbat = 0;
+
+bool registrado = false;
+bool Tx_cadastrado = false;
+bool button_is_pressed = false;
+uint32_t press_start_time = 0;
+
+bool associating = false;
 // -----------------------------------------------------------------------------
 //                                Static Variables
 // -----------------------------------------------------------------------------
 /// Destination of the currently processed sink node
 static EmberNodeId sink_node_id = EMBER_COORDINATOR_ADDRESS;
-bool registrado = false;
-bool Tx_cadastrado = false;
-bool button_is_pressed = false;
-uint32_t press_start_time = 0;
-extern uint16_t Vbat;
 
 // -----------------------------------------------------------------------------
 //                          Public Function Definitions
 // -----------------------------------------------------------------------------
 
+void app_init(){
+  emberAfAllocateEvent(&report_control, &report_handler);
+  emberAfAllocateEvent(&EM4_timeout, &em4_handler);
+  emberAfAllocateEvent(&Init_control, &Init_handler);
+  emberAfAllocateEvent(&radio_control, &radio_handler);
+
+  emberEventControlSetDelayMS(*Init_control, 50);
+}
+
+void Init_handler(){
+  emberAfPluginPollEnableShortPolling(true);
+
+  memory_read(STATUSOP_MEMORY_KEY, &application.Status_Operation);
+  memory_read(TXPOWER_MEMORY_KEY, &tx_power);
+  memory_read(BATTERY_MEMORY_KEY, &Vbat);
+  memory_read(GATE_STATUS_MEMORY_KEY, &application.gate_status);
+
+  app_button_press_enable();
+
+  set_tx(tx_power);
+  iadcInit();
+
+  initialized = true;
+
+  emberEventControlSetInactive(*Init_control);
+  emberEventControlSetDelayMS(*EM4_timeout, 2000);
+}
+
 void app_button_press_cb(uint8_t button, uint8_t duration)
 {
   if(button == 2 && duration < 3){
-      join_sleepy(0);
-      sl_led_turn_on(&sl_led_led_vermelho);
-      emberEventControlSetInactive(*EM4_timeout);
+      if(application.Status_Operation == WAIT_REGISTRATION){
+          associating = true;
+          sl_led_turn_on(&sl_led_led_vermelho);
+          leave();
+      }else{
+          led_blink(VERMELHO, 2, MED_SPEED_BLINK);
+      }
+
+      emberEventControlSetDelayMS(*EM4_timeout,6000);
   }else if(button == 2 && duration <= 3){
       leave();
       reset_parameters();
@@ -120,9 +163,11 @@ void app_button_press_cb(uint8_t button, uint8_t duration)
       application.radio.LastCMD = TX_CMD_BT;
       application.tecla = button + 1;
 
-      led_blink(VERMELHO, 10, VERY_FAST_SPEED_BLINK);
+      if(application.tecla != 2){
+          led_blink(VERMELHO, 10, VERY_FAST_SPEED_BLINK);
+      }
 
-      emberEventControlSetDelayMS(*report_control,200);
+      emberEventControlSetDelayMS(*report_control,1);
   }
 }
 
@@ -189,6 +234,44 @@ void em4_handler(void){
 
 }
 
+void radio_handler(void){
+  packet_void_t *receive;
+
+  receive = &application.radio.Packet;
+
+  switch(receive->cmd){
+    case STATUS_GATE:
+      application.gate_status = receive->data[0];
+      memory_write(GATE_STATUS_MEMORY_KEY, &application.gate_status, sizeof(application.gate_status));
+      switch (application.gate_status) {
+        case CLOSED:
+          led_blink(VERMELHO, 1, MED_SPEED_BLINK);
+          break;
+        case ABERTO:
+          led_blink(VERMELHO, 2, MED_SPEED_BLINK);
+          break;
+        case FECHADO:
+          led_blink(VERMELHO, 1, MED_SPEED_BLINK);
+          break;
+        default:
+          led_blink(VERMELHO, 2, MED_SPEED_BLINK);
+          break;
+      }
+      break;
+
+    case CHANGE_STATUS:
+      application.gate_status = receive->data[0];
+      led_blink(VERMELHO, 1, MED_SPEED_BLINK);
+
+      memory_write(GATE_STATUS_MEMORY_KEY, &application.gate_status, sizeof(application.gate_status));
+
+      break;
+    default:
+      break;
+  }
+  emberEventControlSetInactive(*radio_control);
+}
+
 /**************************************************************************//**
  * Here we print out the first two bytes reported by the sinks as a little
  * endian 16-bits decimal.
@@ -248,13 +331,7 @@ bool emberAfCommonOkToEnterLowPowerCallback(bool enter_em2, uint32_t duration_ms
  *****************************************************************************/
 void emberAfIncomingMessageCallback(EmberIncomingMessage *message)
 {
-  if (message->endpoint == SL_SENSOR_SINK_ENDPOINT) {
-    app_log_info("RX: Data from 0x%04X:", message->source);
-    for (uint8_t i = SL_SENSOR_SINK_DATA_OFFSET; i < message->length; i++) {
-      app_log_info(" %x", message->payload[i]);
-    }
-    app_log_info("\n");
-  }
+  privcallback_Radio_Receive(message->payload,message->length);
 }
 
 /**************************************************************************//**
@@ -281,31 +358,50 @@ void emberAfStackStatusCallback(EmberStatus status)
     case EMBER_NETWORK_UP:
       Tx_cadastrado = true;
       enable_sleep = true;
-      led_blink(VERMELHO, 2, MED_SPEED_BLINK);
+      if(initialized){
+          led_blink(VERMELHO, 2, MED_SPEED_BLINK);
+      }
 
-      if(application.Status_Operation == WAIT_REGISTRATION){
+      if(application.Status_Operation == WAIT_REGISTRATION && initialized){
           emberEventControlSetDelayMS(*report_control, sensor_report_period_ms);
       }
       break;
     case EMBER_NETWORK_DOWN:
       Tx_cadastrado = false;
-      led_blink(VERMELHO, 5, FAST_SPEED_BLINK);
+      if(initialized){
+          if(associating){
+              join_sleepy(0);
+              associating = false;
+          }else{
+              led_blink(VERMELHO, 5, FAST_SPEED_BLINK);
+          }
+      }
       break;
     case EMBER_JOIN_SCAN_FAILED:
-      led_blink(VERMELHO, 2, SLOW_SPEED_BLINK);
+      if(initialized){
+          led_blink(VERMELHO, 2, SLOW_SPEED_BLINK);
+      }
       break;
     case EMBER_JOIN_DENIED:
-      led_blink(VERMELHO, 2, SLOW_SPEED_BLINK);
+      if(initialized){
+          led_blink(VERMELHO, 2, SLOW_SPEED_BLINK);
+      }
       break;
     case EMBER_JOIN_TIMEOUT:
-      led_blink(VERMELHO, 2, SLOW_SPEED_BLINK);
+      if(initialized){
+          led_blink(VERMELHO, 2, SLOW_SPEED_BLINK);
+      }
       break;
     default:
-      led_blink(VERMELHO, 2, SLOW_SPEED_BLINK);
+      if(initialized){
+          led_blink(VERMELHO, 2, SLOW_SPEED_BLINK);
+      }
       break;
   }
+  if(initialized){
+      emberEventControlSetDelayMS(*EM4_timeout,6000);
+  }
 
-  emberEventControlSetDelayMS(*EM4_timeout,6000);
 }
 
 /**************************************************************************//**
@@ -340,6 +436,16 @@ void emberAfEnergyScanCompleteCallback(int8_t mean,
 {
   app_log_info("Energy scan complete, mean=%d min=%d max=%d var=%d\n",
                mean, min, max, variance);
+}
+
+packet_error_e packet_data_demount(uint8_t *inData, uint8_t inLen, packet_void_t *packet){
+  uint8_t i;
+  packet->cmd = inData[0];
+  for(i = 0; i < inLen; i++){
+      packet->data[i] = inData[i+1];
+  }
+
+  return PACKET_OK;
 }
 
 #if defined(EMBER_AF_PLUGIN_MICRIUM_RTOS) && defined(EMBER_AF_PLUGIN_MICRIUM_RTOS_APP_TASK1)

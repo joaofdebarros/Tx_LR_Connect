@@ -11,6 +11,7 @@
 #define TXPOWER_MEMORY_KEY        0
 #define STATUSOP_MEMORY_KEY       1
 #define BATTERY_MEMORY_KEY        2
+#define GATE_STATUS_MEMORY_KEY    3
 
 void memory_write(uint32_t key, uint8_t *value, uint8_t len);
 void memory_read(uint32_t key, void *buffer);

@@ -1,16 +1,14 @@
-app_process.o: ../app_process.c \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\legacy_hal\inc\platform-header.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sli_code_classification.h \
+callbacks/callbacks.o: ../callbacks/callbacks.c \
+ C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect/callbacks/callbacks.h \
+ C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect/app_process.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\ember.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\ember-types.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_gcc.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_component_catalog.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\ember.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\ember-types.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\config\ember-configuration-defaults.h \
+ C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_component_catalog.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/stack-common-config.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/frequency-hopping-config.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/parent-support-config.h \
@@ -37,6 +35,9 @@ app_process.o: ../app_process.c \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\interrupt_manager\inc\arm\cmsis_nvic_virtual.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\interrupt_manager\inc\sl_interrupt_manager.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h \
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sli_code_classification.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\mpu_armv8.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\fgm23\include\system_fgm23.h \
@@ -166,71 +167,17 @@ app_process.o: ../app_process.c \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedtls\include\psa\crypto_compat.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\message.h \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\byte-utilities.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\radio-stream.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_chip.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_system.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_system_generic.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_bus.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\app\common\util\app_log\app_log.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_handles.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_init_eusart_instances.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream_uart.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\dmadrv.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\common\inc\ecode.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\s2_signals\dmadrv_signals.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_ldma.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/dmadrv_config.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_power_manager_config.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/app_log_config.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\poll\poll.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\app\connect\component\sl_sensor_sink\sl_app_common.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_sensor_sink_config.h \
- ../app_process.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\app-framework-common\app_framework_common.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_simple_button_instances.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_simple_button.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_button.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h \
- ../API/LED/led.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_simple_led_instances.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\leddrv\inc\sl_simple_led.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\leddrv\inc\sl_led.h \
- ../API/hNetwork.h ../hplatform/hDriver/hDriver.h \
- ../hplatform/hDriver/hGpio.h ../hplatform/hDriver/hTimer.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_timer.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu_compat.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_gpio.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\sli_em_cmu.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\ustimer\inc\ustimer.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/ustimer_config.h \
- ../API/battery/battery.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect/hplatform/hDriver/hADC.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_iadc.h \
- ../privAPI/Radio.h ../API/memory/memory.h ../hplatform/hDriver/hADC.h \
- ../callbacks/callbacks.h \
- C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect/app_process.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\ember.h
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\legacy_hal\inc\platform-header.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sli_code_classification.h:
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\radio-stream.h
+C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect/callbacks/callbacks.h:
+C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect/app_process.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\ember.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\ember-types.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_gcc.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_component_catalog.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\ember.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\ember-types.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\config\ember-configuration-defaults.h:
+C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_component_catalog.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/stack-common-config.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/frequency-hopping-config.h:
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/parent-support-config.h:
@@ -257,6 +204,9 @@ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\in
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\interrupt_manager\inc\arm\cmsis_nvic_virtual.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\interrupt_manager\inc\sl_interrupt_manager.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h:
+c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sli_code_classification.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\mpu_armv8.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\fgm23\include\system_fgm23.h:
@@ -387,59 +337,3 @@ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\util\third_party\mbedt
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\message.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\byte-utilities.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\radio-stream.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_chip.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_system.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_system_generic.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_bus.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\app\common\util\app_log\app_log.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_slist.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_handles.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_iostream_init_eusart_instances.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream_uart.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\dmadrv.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\common\inc\ecode.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\dmadrv\inc\s2_signals\dmadrv_signals.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_ldma.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/dmadrv_config.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\power_manager\inc\sl_power_manager.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_power_manager_config.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/app_log_config.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\poll\poll.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\app\connect\component\sl_sensor_sink\sl_app_common.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_sensor_sink_config.h:
-../app_process.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\app-framework-common\app_framework_common.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_simple_button_instances.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_simple_button.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\button\inc\sl_button.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h:
-../API/LED/led.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_simple_led_instances.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\leddrv\inc\sl_simple_led.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\driver\leddrv\inc\sl_led.h:
-../API/hNetwork.h:
-../hplatform/hDriver/hDriver.h:
-../hplatform/hDriver/hGpio.h:
-../hplatform/hDriver/hTimer.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_timer.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_cmu_compat.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_gpio.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\sli_em_cmu.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emdrv\ustimer\inc\ustimer.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/ustimer_config.h:
-../API/battery/battery.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect/hplatform/hDriver/hADC.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_iadc.h:
-../privAPI/Radio.h:
-../API/memory/memory.h:
-../hplatform/hDriver/hADC.h:
-../callbacks/callbacks.h:
-C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect/app_process.h:
-c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\stack\include\ember.h:

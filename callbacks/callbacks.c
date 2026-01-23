@@ -1,0 +1,28 @@
+/*
+ * callbacks.c
+ *
+ *  Created on: 18 de july de 2024
+ *      Author: diego.marinho
+ */
+
+
+#include <callbacks/callbacks.h>
+
+packet_void_t Packet;
+extern application_t application;
+extern EmberEventControl *radio_control;
+
+/*
+ * Globas and Externs
+ */
+
+void callback_Radio_Receive(uint8_t *data, uint8_t len){
+  packet_data_demount(data,len,&application.radio.Packet);
+  emberEventControlSetActive(*radio_control);
+}
+
+
+
+
+
+

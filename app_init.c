@@ -41,8 +41,7 @@
 // Ensure that psa is initialized correctly
 #include "psa/crypto.h"
 #include "mbedtls/build_info.h"
-#include "API/hNetwork.h"
-#include "API/memory/memory.h"
+
 // -----------------------------------------------------------------------------
 //                              Macros and Typedefs
 // -----------------------------------------------------------------------------
@@ -58,11 +57,6 @@
 extern EmberKeyData security_key;
 /// Connect security key id
 extern psa_key_id_t security_key_id;
-extern EmberEventControl *report_control;
-extern EmberEventControl *EM4_timeout;
-
-extern uint8_t tx_power;
-extern uint16_t Vbat;
 // -----------------------------------------------------------------------------
 //                                Static Variables
 // -----------------------------------------------------------------------------
@@ -79,13 +73,6 @@ void emberAfInitCallback(void)
 
   // Ensure that psa is initialized correctly
   psa_crypto_init();
-
-  memory_read(STATUSOP_MEMORY_KEY, &application.Status_Operation);
-  memory_read(TXPOWER_MEMORY_KEY, &tx_power);
-  memory_read(BATTERY_MEMORY_KEY, &Vbat);
-
-  emberAfAllocateEvent(&report_control, &report_handler);
-  emberAfAllocateEvent(&EM4_timeout, &em4_handler);
 
   // CLI info message
   app_log_info("\nSensor\n");
@@ -139,7 +126,7 @@ void emberAfInitCallback(void)
   em_status = emberNetworkInit();
   app_log_info("Network status 0x%02X\n", em_status);
 
-  emberEventControlSetDelayMS(*EM4_timeout,2000);
+//  emberEventControlSetDelayMS(*EM4_timeout,2000);
 
 #if defined(EMBER_AF_PLUGIN_BLE)
   bleConnectionInfoTableInit();

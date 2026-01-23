@@ -41,8 +41,6 @@
 // -----------------------------------------------------------------------------
 //                                Global Variables
 // -----------------------------------------------------------------------------
-/// Global flag set by a button push to allow or disallow entering to sleep
-extern bool enable_sleep;
 
 // -----------------------------------------------------------------------------
 //                          Public Function Declarations
@@ -79,14 +77,30 @@ typedef enum{
   LR_DISCONNECT
 }leaving_method_t;
 
+typedef enum{
+  CLOSED = 0,
+  ABERTO,
+  ABRINDO,
+  FECHADO,
+  FECHANDO,
+  SEMIABERTO,
+  TRAVADO,
+  LENDO_ABRE,
+  LENDO_FECHA,
+  INICIAL,
+  ERROR = 0xFF,
+}gate_status_t;
+
 typedef enum SensorCmd_e{
   TX_REGISTRATION = 15,
   TX_CMD_BT = 16,
   IVP_REGISTRATION = 21,
   MOTION_DETECTED = 22,
+  CHANGE_STATUS = 30,
+  STATUS_GATE = 31,
   SETUP_IVP,
   KEEP_ALIVE,
-  STATUS_CENTRAL,
+  STATUS_CENTRAL = 43,
   TAMPER,
 
   CMD_UNKNOWN = 0xFF
@@ -130,6 +144,11 @@ typedef struct{
 //}
 //SensorStatus_t;
 
+typedef enum{
+  PACKET_OK,
+  PACKET_FAIL
+}packet_error_e;
+
 typedef struct{
   packet_void_t Packet;
   SensorCmd_e LastCMD;
@@ -138,6 +157,7 @@ typedef struct{
 typedef struct{
   application_radio_t radio;
   Status_Operation_t Status_Operation;
+  gate_status_t gate_status;
   uint8_t tecla;
 }application_t;
 
@@ -155,4 +175,8 @@ void report_handler(void);
 void em4_handler(void);
 void reset_parameters(void);
 void battery_read();
+void app_init();
+void Init_handler();
+void radio_handler(void);
+packet_error_e packet_data_demount(uint8_t *inData, uint8_t inLen, packet_void_t *packet);
 #endif  // APP_PROCESS_H

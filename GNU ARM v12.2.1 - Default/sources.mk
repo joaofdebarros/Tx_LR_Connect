@@ -22,6 +22,7 @@ API \
 API/memory \
 . \
 autogen \
+callbacks \
 hplatform/hDriver/source \
 privAPI \
 simplicity_sdk_2025.6.2/app/common/util/app_button_press \

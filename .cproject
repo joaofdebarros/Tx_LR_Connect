@@ -405,7 +405,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="connect_create_gbl_image.bat|connect_create_gbl_image.sh|trashed_modified_files|Tx_LR_Connect_cmake|Tx_LR_Connect_iar_cmake" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="connect_create_gbl_image.bat|Tx_LR_Connect_cmake|connect_create_gbl_image.sh|Tx_LR_Connect_iar_cmake|trashed_modified_files" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

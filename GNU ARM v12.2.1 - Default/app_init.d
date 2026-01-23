@@ -191,8 +191,7 @@ app_init.o: ../app_init.c \
  c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
  C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_sensor_sink_config.h \
  ../app_process.h ../app_init.h \
- c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\app-framework-common\app_framework_common.h \
- ../API/hNetwork.h ../API/memory/memory.h
+ c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\app-framework-common\app_framework_common.h
 C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\autogen/sl_component_catalog.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\app\common\util\app_log\app_log.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\platform\service\iostream\inc\sl_iostream.h:
@@ -387,5 +386,3 @@ C:\Users\joao.victor\SimplicityStudio\v5_workspace\Tx_LR_Connect\config/sl_senso
 ../app_process.h:
 ../app_init.h:
 c:\users\joao.victor\simplicitystudio\sdks\simplicity_sdk\protocol\flex\app-framework-common\app_framework_common.h:
-../API/hNetwork.h:
-../API/memory/memory.h:
