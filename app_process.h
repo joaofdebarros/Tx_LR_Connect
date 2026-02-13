@@ -152,6 +152,7 @@ typedef enum{
 typedef struct{
   packet_void_t Packet;
   SensorCmd_e LastCMD;
+  uint8_t RSSI;
 }application_radio_t;
 
 typedef struct{

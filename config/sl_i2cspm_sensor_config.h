@@ -69,12 +69,12 @@
 #define SL_I2CSPM_SENSOR_SCL_PIN                 5
 #endif
 
-// I2C1 SDA on PC07
+// I2C1 SDA on PC08
 #ifndef SL_I2CSPM_SENSOR_SDA_PORT               
 #define SL_I2CSPM_SENSOR_SDA_PORT                SL_GPIO_PORT_C
 #endif
 #ifndef SL_I2CSPM_SENSOR_SDA_PIN                
-#define SL_I2CSPM_SENSOR_SDA_PIN                 7
+#define SL_I2CSPM_SENSOR_SDA_PIN                 8
 #endif
 // [I2C_SL_I2CSPM_SENSOR]$
 // <<< sl:end pin_tool >>>

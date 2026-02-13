@@ -57,7 +57,7 @@ void join_sleepy(uint16_t channel)
   parameters.radioChannel = channel;
 
   // set default PAN ID or the one passed as parameter
-  parameters.panId = 0x0111;
+  parameters.panId = 0x1234;
 
   emberJoinNetwork(EMBER_STAR_SLEEPY_END_DEVICE, &parameters);
   //app_log_info("join sleepy 0x%02X\n", status);

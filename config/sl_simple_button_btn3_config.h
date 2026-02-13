@@ -49,10 +49,10 @@
 // <gpio> SL_SIMPLE_BUTTON_BTN3
 // $[GPIO_SL_SIMPLE_BUTTON_BTN3]
 #ifndef SL_SIMPLE_BUTTON_BTN3_PORT              
-#define SL_SIMPLE_BUTTON_BTN3_PORT               SL_GPIO_PORT_B
+#define SL_SIMPLE_BUTTON_BTN3_PORT               SL_GPIO_PORT_A
 #endif
 #ifndef SL_SIMPLE_BUTTON_BTN3_PIN               
-#define SL_SIMPLE_BUTTON_BTN3_PIN                0
+#define SL_SIMPLE_BUTTON_BTN3_PIN                5
 #endif
 // [GPIO_SL_SIMPLE_BUTTON_BTN3]$
 

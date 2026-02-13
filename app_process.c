@@ -163,9 +163,9 @@ void app_button_press_cb(uint8_t button, uint8_t duration)
       application.radio.LastCMD = TX_CMD_BT;
       application.tecla = button + 1;
 
-      if(application.tecla != 2){
+//      if(application.tecla != 2){
           led_blink(VERMELHO, 10, VERY_FAST_SPEED_BLINK);
-      }
+//      }
 
       emberEventControlSetDelayMS(*report_control,1);
   }
@@ -214,7 +214,7 @@ void battery_read(){
 }
 
 void em4_handler(void){
-  bool button_state = GPIO_PinInGet(gpioPortB, 1);
+  bool button_state = GPIO_PinInGet(gpioPortB, 3);
 
   if(adc_read){
       adc_read = false;
@@ -295,10 +295,11 @@ void report_handler(void)
       case OPERATION_MODE:
         if(application.radio.LastCMD == TX_CMD_BT){
             sendRadio.cmd = TX_CMD_BT;
-            sendRadio.len = 4;
+            sendRadio.len = 5;
             sendRadio.data[0] = application.tecla;          //Tecla
             sendRadio.data[1] = Vbat;                  //Bateria
             sendRadio.data[2] = Vbat >> 8;
+            sendRadio.data[3] = application.radio.RSSI;
         }
 
         break;
@@ -332,6 +333,7 @@ bool emberAfCommonOkToEnterLowPowerCallback(bool enter_em2, uint32_t duration_ms
 void emberAfIncomingMessageCallback(EmberIncomingMessage *message)
 {
   privcallback_Radio_Receive(message->payload,message->length);
+  application.radio.RSSI = -(message->rssi);
 }
 
 /**************************************************************************//**
@@ -347,6 +349,8 @@ void emberAfMessageSentCallback(EmberStatus status,
 
       memory_write(STATUSOP_MEMORY_KEY, &application.Status_Operation, sizeof(application.Status_Operation));
   }
+
+  application.radio.RSSI = -(message->ackRssi);
 }
 
 /**************************************************************************//**
@@ -404,40 +408,6 @@ void emberAfStackStatusCallback(EmberStatus status)
 
 }
 
-/**************************************************************************//**
- * This callback is called in each iteration of the main application loop and
- * can be used to perform periodic functions.
- *****************************************************************************/
-void emberAfTickCallback(void)
-{
-
-}
-
-/**************************************************************************//**
- * This function is called when a frequency hopping client completed the start
- * procedure.
- *****************************************************************************/
-void emberAfFrequencyHoppingStartClientCompleteCallback(EmberStatus status)
-{
-  if (status != EMBER_SUCCESS) {
-    app_log_error("FH Client sync failed, status=0x%02X\n", status);
-  } else {
-    app_log_info("FH Client Sync Success\n");
-  }
-}
-
-/**************************************************************************//**
- * This function is called when a requested energy scan is complete.
- *****************************************************************************/
-void emberAfEnergyScanCompleteCallback(int8_t mean,
-                                       int8_t min,
-                                       int8_t max,
-                                       uint16_t variance)
-{
-  app_log_info("Energy scan complete, mean=%d min=%d max=%d var=%d\n",
-               mean, min, max, variance);
-}
-
 packet_error_e packet_data_demount(uint8_t *inData, uint8_t inLen, packet_void_t *packet){
   uint8_t i;
   packet->cmd = inData[0];
@@ -448,33 +418,3 @@ packet_error_e packet_data_demount(uint8_t *inData, uint8_t inLen, packet_void_t
   return PACKET_OK;
 }
 
-#if defined(EMBER_AF_PLUGIN_MICRIUM_RTOS) && defined(EMBER_AF_PLUGIN_MICRIUM_RTOS_APP_TASK1)
-
-/**************************************************************************//**
- * This function is called from the Micrium RTOS plugin before the
- * Application (1) task is created.
- *****************************************************************************/
-void emberAfPluginMicriumRtosAppTask1InitCallback(void)
-{
-  app_log_info("app task init\n");
-}
-
-#include <kernel/include/os.h>
-#define TICK_INTERVAL_MS 1000
-
-/**************************************************************************//**
- * This function implements the Application (1) task main loop.
- *****************************************************************************/
-void emberAfPluginMicriumRtosAppTask1MainLoopCallback(void *p_arg)
-{
-  RTOS_ERR err;
-  OS_TICK yield_time_ticks = (OSCfg_TickRate_Hz * TICK_INTERVAL_MS) / 1000;
-
-  while (true) {
-    app_log_info("app task tick\n");
-
-    OSTimeDly(yield_time_ticks, OS_OPT_TIME_DLY, &err);
-  }
-}
-
-#endif // EMBER_AF_PLUGIN_MICRIUM_RTOS && EMBER_AF_PLUGIN_MICRIUM_RTOS_APP_TASK1

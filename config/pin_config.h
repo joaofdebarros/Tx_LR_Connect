@@ -93,12 +93,12 @@
 #define I2C1_SCL_PIN                             5
 #endif
 
-// I2C1 SDA on PC07
+// I2C1 SDA on PC08
 #ifndef I2C1_SDA_PORT                           
 #define I2C1_SDA_PORT                            SL_GPIO_PORT_C
 #endif
 #ifndef I2C1_SDA_PIN                            
-#define I2C1_SDA_PIN                             7
+#define I2C1_SDA_PIN                             8
 #endif
 
 // [I2C1]$
@@ -207,6 +207,13 @@
 #define _PIN                                     0
 #endif
 
+#ifndef BT4_PORT                                
+#define BT4_PORT                                 SL_GPIO_PORT_A
+#endif
+#ifndef BT4_PIN                                 
+#define BT4_PIN                                  5
+#endif
+
 #ifndef Vermelho_PORT                           
 #define Vermelho_PORT                            SL_GPIO_PORT_A
 #endif
@@ -221,32 +228,25 @@
 #define Verde_PIN                                8
 #endif
 
-#ifndef BT4_PORT                                
-#define BT4_PORT                                 SL_GPIO_PORT_B
+#ifndef BT2_PORT                                
+#define BT2_PORT                                 SL_GPIO_PORT_B
 #endif
-#ifndef BT4_PIN                                 
-#define BT4_PIN                                  0
+#ifndef BT2_PIN                                 
+#define BT2_PIN                                  1
 #endif
 
 #ifndef BT3_PORT                                
 #define BT3_PORT                                 SL_GPIO_PORT_B
 #endif
 #ifndef BT3_PIN                                 
-#define BT3_PIN                                  1
-#endif
-
-#ifndef BT2_PORT                                
-#define BT2_PORT                                 SL_GPIO_PORT_B
-#endif
-#ifndef BT2_PIN                                 
-#define BT2_PIN                                  2
+#define BT3_PIN                                  3
 #endif
 
 #ifndef BT1_PORT                                
-#define BT1_PORT                                 SL_GPIO_PORT_B
+#define BT1_PORT                                 SL_GPIO_PORT_C
 #endif
 #ifndef BT1_PIN                                 
-#define BT1_PIN                                  3
+#define BT1_PIN                                  7
 #endif
 
 // [CUSTOM_PIN_NAME]$
