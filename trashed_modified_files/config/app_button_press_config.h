@@ -59,7 +59,7 @@
 // <i> Default: 250
 // <i> Any button press shorter than this value and longer than MIN_VALID_BUTTON_PRESS_DURATION_MS
 // will be considered SHORT_BUTTON_PRESS.
-#define SHORT_BUTTON_PRESS_DURATION_MS   200
+#define SHORT_BUTTON_PRESS_DURATION_MS   50
 
 // <o MEDIUM_BUTTON_PRESS_DURATION_MS> Duration (ms) of MEDIUM button presses
 // <i> Default: 1000

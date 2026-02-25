@@ -130,6 +130,7 @@ void Init_handler(){
   memory_read(TXPOWER_MEMORY_KEY, &tx_power);
   memory_read(BATTERY_MEMORY_KEY, &Vbat);
   memory_read(GATE_STATUS_MEMORY_KEY, &application.gate_status);
+  memory_read(RSSI_MEMORY_KEY, &application.radio.RSSI);
 
   app_button_press_enable();
 
@@ -144,17 +145,24 @@ void Init_handler(){
 
 void app_button_press_cb(uint8_t button, uint8_t duration)
 {
-  if(button == 2 && duration < 3){
+  if(button == 3 && duration < 3){
       if(application.Status_Operation == WAIT_REGISTRATION){
           associating = true;
           sl_led_turn_on(&sl_led_led_vermelho);
           leave();
       }else{
-          led_blink(VERMELHO, 2, MED_SPEED_BLINK);
+          application.radio.LastCMD = TX_CMD_BT;
+          application.tecla = button + 1;
+
+          //      if(application.tecla != 2){
+          led_blink(VERMELHO, 10, VERY_FAST_SPEED_BLINK);
+          //      }
+
+          emberEventControlSetDelayMS(*report_control,1);
       }
 
       emberEventControlSetDelayMS(*EM4_timeout,6000);
-  }else if(button == 2 && duration <= 3){
+  }else if(button == 3 && duration <= 3){
       leave();
       reset_parameters();
       emberEventControlSetDelayMS(*EM4_timeout,2000);
@@ -214,7 +222,7 @@ void battery_read(){
 }
 
 void em4_handler(void){
-  bool button_state = GPIO_PinInGet(gpioPortB, 3);
+  bool button_state = GPIO_PinInGet(gpioPortA, 5);
 
   if(adc_read){
       adc_read = false;
@@ -334,6 +342,8 @@ void emberAfIncomingMessageCallback(EmberIncomingMessage *message)
 {
   privcallback_Radio_Receive(message->payload,message->length);
   application.radio.RSSI = -(message->rssi);
+
+  memory_write(RSSI_MEMORY_KEY, &application.radio.RSSI,sizeof(application.radio.RSSI));
 }
 
 /**************************************************************************//**
@@ -351,6 +361,7 @@ void emberAfMessageSentCallback(EmberStatus status,
   }
 
   application.radio.RSSI = -(message->ackRssi);
+  memory_write(RSSI_MEMORY_KEY, &application.radio.RSSI,sizeof(application.radio.RSSI));
 }
 
 /**************************************************************************//**
