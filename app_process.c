@@ -95,13 +95,16 @@ packet_void_t sendRadio;
 
 application_t application;
 
-uint8_t tx_power = 0;
+uint8_t tx_power = 150;
 uint16_t Vbat = 0;
 
 bool registrado = false;
 bool Tx_cadastrado = false;
 bool button_is_pressed = false;
 uint32_t press_start_time = 0;
+
+bool reset_pressed = false;
+uint8_t reset_time = 0;
 
 bool associating = false;
 // -----------------------------------------------------------------------------
@@ -131,6 +134,7 @@ void Init_handler(){
   memory_read(BATTERY_MEMORY_KEY, &Vbat);
   memory_read(GATE_STATUS_MEMORY_KEY, &application.gate_status);
   memory_read(RSSI_MEMORY_KEY, &application.radio.RSSI);
+  memory_read(LR_KEY_MEMORY_KEY, &application.LR_key);
 
   app_button_press_enable();
 
@@ -139,6 +143,12 @@ void Init_handler(){
 
   initialized = true;
 
+  bool button_state = GPIO_PinInGet(gpioPortA, 5);
+
+  if(button_state){
+      reset_pressed = true;
+  }
+
   emberEventControlSetInactive(*Init_control);
   emberEventControlSetDelayMS(*EM4_timeout, 2000);
 }
@@ -146,6 +156,7 @@ void Init_handler(){
 void app_button_press_cb(uint8_t button, uint8_t duration)
 {
   if(button == 3 && duration < 3){
+      reset_pressed = false;
       if(application.Status_Operation == WAIT_REGISTRATION){
           associating = true;
           sl_led_turn_on(&sl_led_led_vermelho);
@@ -162,9 +173,15 @@ void app_button_press_cb(uint8_t button, uint8_t duration)
       }
 
       emberEventControlSetDelayMS(*EM4_timeout,6000);
-  }else if(button == 3 && duration <= 3){
+  }else if(button == 3 && duration >= 3 && duration != 5){
+      reset_time = 0;
+      reset_pressed = false;
+
       leave();
       reset_parameters();
+      emberEventControlSetDelayMS(*EM4_timeout,2000);
+  }else if(button == 3 && duration == 5){
+      reset_pressed = true;
       emberEventControlSetDelayMS(*EM4_timeout,2000);
   }else{
 
@@ -182,6 +199,9 @@ void app_button_press_cb(uint8_t button, uint8_t duration)
 void reset_parameters(){
   memory_erase(TXPOWER_MEMORY_KEY);
   memory_erase(STATUSOP_MEMORY_KEY);
+  memory_erase(LR_KEY_MEMORY_KEY);
+
+  application.LR_key = 0;
 
   tx_power = 150;
   set_tx(tx_power);
@@ -189,6 +209,7 @@ void reset_parameters(){
 
   memory_write(STATUSOP_MEMORY_KEY, &application.Status_Operation, sizeof(application.Status_Operation));
   memory_write(TXPOWER_MEMORY_KEY, &tx_power, sizeof(tx_power));
+  memory_write(LR_KEY_MEMORY_KEY, &application.LR_key, sizeof(application.LR_key));
 
 }
 
@@ -200,7 +221,10 @@ EmberStatus radio_send_packet(packet_void_t *pck){
   for(uint8_t i = 0; i < (pck->len-1); i++){
       buffer_send[i+1] = pck->data[i];
   }
-  status = radioMessageSend(0,pck->len,buffer_send);
+  buffer_send[pck->len] = application.LR_key;
+  buffer_send[(pck->len)+1] = application.LR_key >> 8;
+
+  status = radioMessageSend(0,(pck->len)+2,buffer_send);
 
   return status;
 }
@@ -231,6 +255,12 @@ void em4_handler(void){
           sl_power_manager_enter_em4();
           emberEventControlSetInactive(*EM4_timeout);
       }else{
+          if(reset_pressed){
+              reset_time++;
+              if(reset_time >= 3){
+                  hGpio_ledTurnOn(&sl_led_led_vermelho);
+              }
+          }
           emberEventControlSetDelayMS(*EM4_timeout,2000);
       }
   }else{
@@ -273,6 +303,12 @@ void radio_handler(void){
 
       memory_write(GATE_STATUS_MEMORY_KEY, &application.gate_status, sizeof(application.gate_status));
 
+      break;
+
+    case LR_KEY:
+      application.LR_key = (receive->data[1] << 8) | (receive->data[0]);
+
+      memory_write(LR_KEY_MEMORY_KEY, &application.LR_key, sizeof(application.LR_key));
       break;
     default:
       break;
@@ -344,6 +380,27 @@ void emberAfIncomingMessageCallback(EmberIncomingMessage *message)
   application.radio.RSSI = -(message->rssi);
 
   memory_write(RSSI_MEMORY_KEY, &application.radio.RSSI,sizeof(application.radio.RSSI));
+
+  if(application.Status_Operation == WAIT_REGISTRATION){
+      privcallback_Radio_Receive(message->payload,message->length);
+      application.radio.RSSI = -(message->rssi);
+  }else if(application.Status_Operation == PERIOD_INSTALATION || application.Status_Operation == OPERATION_MODE){
+      uint16_t received_key = 0;
+
+      received_key = (message->payload[message->length - 1] << 8) | (message->payload[message->length - 2]);
+
+      if(application.LR_key != 0){
+          if(received_key == application.LR_key){
+              privcallback_Radio_Receive(message->payload,message->length - 2);
+              application.radio.RSSI = -(message->rssi);
+          }
+      }else{
+          privcallback_Radio_Receive(message->payload,message->length - 2);
+          application.radio.RSSI = -(message->rssi);
+      }
+  }
+
+  memory_write(RSSI_MEMORY_KEY, &application.radio.RSSI,sizeof(application.radio.RSSI));
 }
 
 /**************************************************************************//**
@@ -373,6 +430,12 @@ void emberAfStackStatusCallback(EmberStatus status)
     case EMBER_NETWORK_UP:
       Tx_cadastrado = true;
       enable_sleep = true;
+//      EmberStatus FH_success;
+//      FH_success = emberFrequencyHoppingStartClient(0, SL_SENSOR_SINK_PAN_ID_JB);
+//
+//      if(FH_success == 0){
+//          led_blink(VERMELHO, 2, MED_SPEED_BLINK);
+//      }
       if(initialized){
           led_blink(VERMELHO, 2, MED_SPEED_BLINK);
       }

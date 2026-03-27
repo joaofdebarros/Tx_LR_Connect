@@ -228,18 +228,18 @@
 #define Verde_PIN                                8
 #endif
 
-#ifndef BT2_PORT                                
-#define BT2_PORT                                 SL_GPIO_PORT_B
-#endif
-#ifndef BT2_PIN                                 
-#define BT2_PIN                                  1
-#endif
-
 #ifndef BT3_PORT                                
 #define BT3_PORT                                 SL_GPIO_PORT_B
 #endif
 #ifndef BT3_PIN                                 
-#define BT3_PIN                                  3
+#define BT3_PIN                                  1
+#endif
+
+#ifndef BT2_PORT                                
+#define BT2_PORT                                 SL_GPIO_PORT_B
+#endif
+#ifndef BT2_PIN                                 
+#define BT2_PIN                                  3
 #endif
 
 #ifndef BT1_PORT                                

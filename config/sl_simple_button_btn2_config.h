@@ -52,7 +52,7 @@
 #define SL_SIMPLE_BUTTON_BTN2_PORT               SL_GPIO_PORT_B
 #endif
 #ifndef SL_SIMPLE_BUTTON_BTN2_PIN               
-#define SL_SIMPLE_BUTTON_BTN2_PIN                3
+#define SL_SIMPLE_BUTTON_BTN2_PIN                1
 #endif
 // [GPIO_SL_SIMPLE_BUTTON_BTN2]$
 

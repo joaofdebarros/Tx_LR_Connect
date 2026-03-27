@@ -102,6 +102,7 @@ typedef enum SensorCmd_e{
   KEEP_ALIVE,
   STATUS_CENTRAL = 43,
   TAMPER,
+  LR_KEY = 47,
 
   CMD_UNKNOWN = 0xFF
 }SensorCmd_e;
@@ -160,6 +161,7 @@ typedef struct{
   Status_Operation_t Status_Operation;
   gate_status_t gate_status;
   uint8_t tecla;
+  uint16_t LR_key;
 }application_t;
 
 extern application_t application;

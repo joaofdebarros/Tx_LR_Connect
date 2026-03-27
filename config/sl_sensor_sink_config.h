@@ -50,7 +50,7 @@
 // <o SL_SENSOR_SINK_PAN_ID> Sensor Sink PAN ID
 // <i> Sensor Sink PAN ID
 // <i> Default: 0x01FF
-#define SL_SENSOR_SINK_PAN_ID                    (0x01FF)
+#define SL_SENSOR_SINK_PAN_ID           (0x01FF)
 
 // <o SL_SENSOR_SINK_DATA_OFFSET> Sensor Sink data offset
 // <i> Sensor Sink data offset
